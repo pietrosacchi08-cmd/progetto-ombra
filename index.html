@@ -3,251 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetto Ombra Milano | Pergole Bioclimatiche e Vele da Sole</title>
+    <title>Progetto Ombra Milano | Pergole Bioclimatiche e Schermature Solari</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #F9F9F7; color: #1C1C1C; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
-        @media (max-width: 768px) { .container { padding: 0 24px; } }
-        .section { padding: 120px 0; }
-        @media (max-width: 768px) { .section { padding: 80px 0; } }
-        .section-dark { background: #1C1C1C; color: #F9F9F7; }
-        .btn-outline { display: inline-block; padding: 14px 40px; border: 1px solid; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; transition: all 0.4s; cursor: pointer; }
-        .btn-outline-light { border-color: #F9F9F7; color: #F9F9F7; }
-        .btn-outline-light:hover { background: #F9F9F7; color: #1C1C1C; }
-        .btn-outline-dark { border-color: #1C1C1C; color: #1C1C1C; }
-        .btn-outline-dark:hover { background: #1C1C1C; color: #F9F9F7; }
-        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        @media (max-width: 768px) { .split-grid { grid-template-columns: 1fr; gap: 40px; } }
-        .split-grid.reverse > :first-child { order: 2; }
-        .split-grid.reverse > :last-child { order: 1; }
-        @media (max-width: 768px) { .split-grid.reverse > :first-child { order: 1; } .split-grid.reverse > :last-child { order: 2; } }
-        model-viewer { width: 100%; height: 450px; display: block; background: #f0efe8; --poster-color: transparent; }
-        @media (max-width: 768px) { model-viewer { height: 320px; } }
-        .nav-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 300; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; color: #1C1C1C; transition: opacity 0.3s; }
-        .nav-link:hover { opacity: 0.5; }
-        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(28,28,28,0.1) 0%, rgba(28,28,28,0.5) 100%); }
-        .hero-title { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.95; letter-spacing: -1px; }
-        .hero-sub { font-size: clamp(0.9rem, 1.5vw, 1.1rem); font-weight: 200; letter-spacing: 3px; text-transform: uppercase; }
-        .section-title { font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -0.5px; }
-        .card-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
-        .text-light { color: rgba(249,249,247,0.7); }
-        .text-muted { color: rgba(28,28,28,0.5); }
-        .border-divider { height: 1px; background: rgba(28,28,28,0.08); margin: 0; }
-        .border-divider-light { height: 1px; background: rgba(249,249,247,0.12); }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:#F9F9F7;color:#1C1C1C;font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;font-weight:400}
+        .container{max-width:1200px;margin:0 auto;padding:0 40px}
+        @media(max-width:768px){.container{padding:0 24px}}
+        .section{padding:120px 0}
+        @media(max-width:768px){.section{padding:80px 0}}
+        .section-dark{background:#1C1C1C;color:#F9F9F7}
+        .section-stone{background:#f5f3ef}
+        .btn-outline{display:inline-block;padding:14px 36px;border:1px solid;font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.4s;cursor:pointer}
+        .btn-outline-light{border-color:#F9F9F7;color:#F9F9F7}
+        .btn-outline-light:hover{background:#F9F9F7;color:#1C1C1C}
+        .btn-outline-dark{border-color:#1C1C1C;color:#1C1C1C}
+        .btn-outline-dark:hover{background:#1C1C1C;color:#F9F9F7}
+        .btn-primary{display:inline-block;padding:16px 40px;background:#1C5698;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all 0.4s;border:none;cursor:pointer}
+        .btn-primary:hover{background:#0f3d6e}
+        .btn-green{background:#2d6a4f}
+        .btn-green:hover{background:#1b4d36}
+        .split-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+        @media(max-width:768px){.split-grid{grid-template-columns:1fr;gap:40px}}
+        .split-grid.r> :first-child{order:2}
+        .split-grid.r> :last-child{order:1}
+        @media(max-width:768px){.split-grid.r> :first-child{order:1}.split-grid.r> :last-child{order:2}}
+        .canvas-3d-wrapper{width:100%;height:420px;background:#f0efe8;position:relative;overflow:hidden}
+        @media(max-width:768px){.canvas-3d-wrapper{height:280px}}
+        .canvas-3d-wrapper model-viewer,.canvas-3d-wrapper canvas{width:100%;height:100%;display:block}
+        .hero-canvas{height:100vh;width:100%;position:relative;background:#1C1C1C}
+        .hero-canvas model-viewer{height:100%;width:100%;--poster-color:transparent}
+        .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(28,28,28,0.85) 0%,rgba(28,28,28,0.3) 100%);z-index:1}
+        .hero-content{position:absolute;inset:0;z-index:2;display:flex;align-items:center;padding:0 40px}
+        @media(max-width:768px){.hero-content{padding:0 24px}}
+        .hero-title{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1;letter-spacing:-1px;color:#F9F9F7}
+        .hero-sub{font-size:clamp(0.85rem,1.2vw,1rem);font-weight:200;letter-spacing:3px;text-transform:uppercase;color:rgba(249,249,247,0.6)}
+        .section-title{font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-0.5px}
+        .label-sm{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400}
+        .text-muted{color:rgba(28,28,28,0.5)}
+        .text-light-muted{color:rgba(249,249,247,0.5)}
+        .bd{height:1px;background:rgba(28,28,28,0.06);margin:0}
+        .bd-light{height:1px;background:rgba(249,249,247,0.1)}
+        .deep-link{font-size:12px;letter-spacing:1px;color:rgba(28,28,28,0.4);text-decoration:none;border-bottom:1px solid rgba(28,28,28,0.15);padding-bottom:2px;transition:all 0.3s;display:inline-flex;align-items:center;gap:6px}
+        .deep-link:hover{color:#1C5698;border-color:#1C5698}
+        .deep-link-light{color:rgba(249,249,247,0.5);border-color:rgba(249,249,247,0.2)}
+        .deep-link-light:hover{color:#F9F9F7;border-color:#F9F9F7}
+        .whatsapp-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 20px rgba(37,211,102,0.3);text-decoration:none;transition:all 0.3s}
+        .whatsapp-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,0.4)}
+        .form-input{width:100%;padding:14px 16px;border:1px solid rgba(28,28,28,0.12);font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;font-size:14px;background:transparent;color:#1C1C1C;outline:none;transition:border 0.3s}
+        .form-input:focus{border-color:#1C5698}
+        .form-input-dark{background:transparent;border-color:rgba(249,249,247,0.2);color:#F9F9F7}
+        .form-input-dark:focus{border-color:rgba(249,249,247,0.5)}
+        .form-input-dark::placeholder{color:rgba(249,249,247,0.3)}
+        .fade-up{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.23,1,0.32,1)}
+        .fade-up.show{opacity:1;transform:translateY(0)}
+        @keyframes pulse-wa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.3)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.5)}}
+        @media(max-width:768px){.hero-canvas{height:90vh}}
     </style>
 </head>
 <body>
 
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/393901234567" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
     <!-- Navbar -->
-    <header class="fixed w-full z-50" style="background:rgba(249,249,247,0.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(28,28,28,0.06);">
-        <div class="container">
-            <nav style="display:flex;justify-content:space-between;align-items:center;height:68px;">
-                <a href="#" style="text-decoration:none;color:#1C1C1C;">
-                    <div style="font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:2px;">PROGETTO OMBRA</div>
-                    <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:200;margin-top:-2px;">Milano — Outdoor Design</div>
-                </a>
-                <div style="display:none;gap:40px;align-items:center;" class="desktop-nav">
-                    <a href="#pergole" class="nav-link">Pergole</a>
-                    <a href="#vele" class="nav-link">Vele da Sole</a>
-                    <a href="#contatti" class="nav-link">Contatti</a>
-                    <a href="tel:+39021234567" style="padding:10px 28px;border:1px solid #1C1C1C;font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;transition:all 0.3s;" onmouseover="this.style.background='#1C1C1C';this.style.color='#F9F9F7'" onmouseout="this.style.background='transparent';this.style.color='#1C1C1C'">Richiedi Preventivo</a>
-                </div>
-                <button id="menu-toggle" style="background:none;border:none;font-size:22px;cursor:pointer;color:#1C1C1C;display:none;" class="menu-btn"><i class="fas fa-bars"></i></button>
-            </nav>
-        </div>
-        <div id="mobile-menu" style="display:none;padding:24px;background:#F9F9F7;border-top:1px solid rgba(28,28,28,0.06);" class="mobile-menu">
-            <div style="display:flex;flex-direction:column;gap:20px;text-align:center;">
-                <a href="#pergole" class="nav-link" style="font-size:14px;">Pergole</a>
-                <a href="#vele" class="nav-link" style="font-size:14px;">Vele da Sole</a>
-                <a href="#contatti" class="nav-link" style="font-size:14px;">Contatti</a>
-                <a href="tel:+39021234567" style="padding:12px 28px;border:1px solid #1C1C1C;font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;display:inline-block;margin:8px auto 0;">Richiedi Preventivo</a>
+    <header style="position:fixed;width:100%;z-index:50;background:rgba(249,249,247,0.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(28,28,28,0.05);">
+        <div class="container"><nav style="display:flex;justify-content:space-between;align-items:center;height:66px;">
+            <a href="#" style="text-decoration:none;color:#1C1C1C;"><div style="font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:2px;">PROGETTO OMBRA</div><div style="font-size:8px;letter-spacing:3px;text-transform:uppercase;font-weight:200;opacity:0.4;">Milano — Outdoor Design</div></a>
+            <div class="desktop-nav" style="display:flex;gap:32px;align-items:center;">
+                <a href="#bioclimatiche" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Pergole</a>
+                <a href="#vele" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Vele</a>
+                <a href="#innovazione" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Green Tech</a>
+                <a href="#progetti" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Progetti</a>
+                <a href="#contatti" class="btn-primary" style="padding:10px 24px;font-size:10px;">Richiedi Sopralluogo</a>
+            </div>
+            <button id="menu-toggle" class="menu-btn" style="display:none;background:none;border:none;font-size:22px;cursor:pointer;color:#1C1C1C;"><i class="fas fa-bars"></i></button>
+        </nav></div>
+        <div id="mobile-menu" style="display:none;padding:24px;background:#F9F9F7;border-top:1px solid rgba(28,28,28,0.05);">
+            <div style="display:flex;flex-direction:column;gap:16px;text-align:center;">
+                <a href="#bioclimatiche" style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;">Pergole</a>
+                <a href="#vele" style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;">Vele</a>
+                <a href="#innovazione" style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;">Green Tech</a>
+                <a href="#progetti" style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;">Progetti</a>
+                <a href="#contatti" class="btn-primary" style="display:inline-block;margin:8px auto 0;padding:12px 32px;font-size:11px;">Richiedi Sopralluogo</a>
             </div>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section style="height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;"></div>
+    <!-- HERO -->
+    <section class="hero-canvas" style="display:flex;align-items:center;">
+        <model-viewer src="https://modelviewer.dev/shared-assets/models/Chair.glb" camera-controls auto-rotate rotation-per-second="20deg" style="position:absolute;inset:0;width:100%;height:100%;--poster-color:transparent;" touch-action="pan-y"></model-viewer>
         <div class="hero-overlay"></div>
-        <div style="position:relative;z-index:2;text-align:center;max-width:800px;padding:0 24px;">
-            <h1 class="hero-title" style="color:#F9F9F7;margin-bottom:20px;">Architettura d'<span style="font-style:italic;">Esterni</span></h1>
-            <p class="hero-sub" style="color:rgba(249,249,247,0.8);margin-bottom:48px;">Pergole Bioclimatiche · Vele da Sole · Design su Misura</p>
-            <a href="#pergole" class="btn-outline btn-outline-light">Scopri i Sistemi</a>
-        </div>
-        <div style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:rgba(249,249,247,0.4);font-size:20px;animation:bounce 2s infinite;">↓</div>
-        <style>@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}</style>
-    </section>
-
-    <!-- Intro -->
-    <section class="section" style="text-align:center;">
-        <div class="container" style="max-width:720px;">
-            <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:rgba(28,28,28,0.4);margin-bottom:16px;">Dal 2010 a Milano</p>
-            <h2 class="section-title" style="margin-bottom:24px;">Il tuo esterno diventa <span style="font-style:italic;">ambiente vivibile</span></h2>
-            <p style="font-weight:200;font-size:1.05rem;line-height:1.8;color:rgba(28,28,28,0.7);">Pergole bioclimatiche, vele da sole e sistemi di schermatura solare progettati su misura. Trasformiamo terrazze e giardini in spazi eleganti, protetti e abitabili in ogni stagione.</p>
+        <div class="hero-content">
+            <div style="max-width:620px;">
+                <div style="display:inline-flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;">
+                    <span style="padding:6px 16px;border:1px solid rgba(249,249,247,0.2);border-radius:30px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(249,249,247,0.6);">Milano — Dal 2010</span>
+                    <span style="padding:6px 16px;border:1px solid rgba(249,249,247,0.2);border-radius:30px;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(249,249,247,0.6);">Design & Innovazione</span>
+                </div>
+                <h1 class="hero-title" style="margin-bottom:20px;">Progettiamo la Luce.<br>Architettura Outdoor d'Eccellenza a Milano.</h1>
+                <p style="font-size:clamp(0.9rem,1.2vw,1.05rem);font-weight:200;line-height:1.8;color:rgba(249,249,247,0.65);margin-bottom:40px;max-width:520px;">Sistemi di copertura, bioclimatiche e schermature solari su misura. Trasformiamo giardini, terrazzi e dehor in oasi di design da vivere 365 giorni all'anno.</p>
+                <div style="display:flex;gap:16px;flex-wrap:wrap;">
+                    <a href="#contatti" class="btn-primary">Richiedi un Sopralluogo Gratuito</a>
+                    <a href="https://wa.me/393901234567" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 36px;border:1px solid rgba(249,249,247,0.3);font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#F9F9F7;transition:all 0.3s;" onmouseover="this.style.background='rgba(249,249,247,0.1)'" onmouseout="this.style.background='transparent'"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Parla Ora su WhatsApp</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="border-divider"></div>
-
-    <!-- Product 1: Pergole Bioclimatiche + 3D -->
-    <section id="pergole" class="section">
+    <!-- A. Pergola Bioclimatica Retrattile -->
+    <section id="bioclimatiche" class="section">
         <div class="container">
             <div class="split-grid">
                 <div>
-                    <p class="card-label" style="color:rgba(28,28,28,0.3);margin-bottom:16px;">Sistema 01</p>
-                    <h2 class="section-title" style="margin-bottom:20px;">Pergola <span style="font-style:italic;">Bioclimatica</span></h2>
-                    <p style="font-weight:200;font-size:0.95rem;line-height:1.9;color:rgba(28,28,28,0.7);margin-bottom:32px;">
-                        Lamelle orientabili in alluminio, motorizzazione elettrica integrabile con sensori di pioggia e vento, resistenza alle intemperie e design minimalista. 
-                        Controlla luce, ventilazione e protezione solare con un semplice gesto. Struttura autoportante o a parete, disponibile in qualsiasi colore RAL.
-                    </p>
-                    <a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a>
+                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 01 — Pergola Retrattile</p>
+                    <h2 class="section-title" style="margin-bottom:20px;">Lame Impacchettabili <span style="font-style:italic;">Motorizzate</span></h2>
+                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Il massimo della flessibilità per l'outdoor. Grazie alle lame in alluminio orientabili e completamente impacchettabili motorizzate, permette di aprire totalmente la copertura verso il cielo o di chiuderla ermeticamente, offrendo una protezione totale da sole e pioggia con un semplice click.</p>
+                    <a href="https://www.progettoombra.it/pergola-bioclimatica" target="_blank" class="deep-link" style="margin-bottom:24px;">🔍 Ulteriori informazioni su configurazioni e motorizzazioni →</a>
+                    <div style="margin-top:32px;"><a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a></div>
                 </div>
                 <div>
-                    <model-viewer src="https://modelviewer.dev/shared-assets/models/Chair.glb" camera-controls auto-rotate rotation-per-second="30deg" touch-action="pan-y" loading="eager" reveal="auto">
-                    </model-viewer>
-                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.3);margin-top:12px;text-align:center;">Modello 3D interattivo — ruota con il dito</p>
+                    <div class="canvas-3d-wrapper"><canvas id="bioclimatica-retrattile-3d"></canvas></div>
+                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);margin-top:10px;text-align:center;">Modello 3D interattivo</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="border-divider"></div>
+    <div class="bd"></div>
 
-    <!-- Product 2: Vele da Sole + 3D -->
+    <!-- B. Pergola Bioclimatica Classica -->
+    <section class="section">
+        <div class="container">
+            <div class="split-grid r">
+                <div>
+                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 02 — Pergola Classica</p>
+                    <h2 class="section-title" style="margin-bottom:20px;">Lame Orientabili <span style="font-style:italic;">Bris</span></h2>
+                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Tecnologia e microclima perfetto. Le lamelle in alluminio regolano millimetricamente l'intensità della luce solare e favoriscono il ricircolo naturale dell'aria. Una struttura solida, minimale e dal design contemporaneo per vivere il dehor in totale comfort.</p>
+                    <a href="https://www.progettoombra.it/pergola-bioclimatica-classica" target="_blank" class="deep-link" style="margin-bottom:24px;">🔍 Vedi dettagli tecnici sul sito ufficiale →</a>
+                    <div style="margin-top:32px;"><a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a></div>
+                </div>
+                <div>
+                    <div class="canvas-3d-wrapper"><canvas id="bioclimatica-classic-3d"></canvas></div>
+                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);margin-top:10px;text-align:center;">Modello 3D interattivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bd"></div>
+
+    <!-- C. Tenda da Sole con Cassonetto -->
+    <section class="section">
+        <div class="container">
+            <div class="split-grid">
+                <div>
+                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 03 — Tenda Cassonetto</p>
+                    <h2 class="section-title" style="margin-bottom:20px;">Minimo Ingombro <span style="font-style:italic;">a Scomparsa</span></h2>
+                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Tecnologia e pulizia visiva si fondono in una struttura a scomparsa totale. Quando chiusa, il cassonetto micro protegge integralmente il tessuto dagli agenti atmosferici, integrandosi perfettamente nella facciata senza comprometterne l'estetica.</p>
+                    <a href="https://www.progettoombra.it/tende-da-sole" target="_blank" class="deep-link" style="margin-bottom:24px;">🔍 Sfoglia la gamma tessuti e modelli →</a>
+                    <div style="margin-top:32px;"><a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a></div>
+                </div>
+                <div>
+                    <div class="canvas-3d-wrapper"><canvas id="tenda-cassonetto-3d"></canvas></div>
+                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);margin-top:10px;text-align:center;">Modello 3D interattivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bd"></div>
+
+    <!-- D. Vele e Ombrelloni Nautici -->
     <section id="vele" class="section">
         <div class="container">
-            <div class="split-grid reverse">
+            <div class="split-grid r">
                 <div>
-                    <p class="card-label" style="color:rgba(28,28,28,0.3);margin-bottom:16px;">Sistema 02</p>
-                    <h2 class="section-title" style="margin-bottom:20px;">Vela da <span style="font-style:italic;">Sole</span></h2>
-                    <p style="font-weight:200;font-size:0.95rem;line-height:1.9;color:rgba(28,28,28,0.7);margin-bottom:32px;">
-                        Tensostrutture in tessuto tecnico ad alta resistenza. Forme geometriche pure (quadrata, rettangolare, triangolare) per creare ombre scenografiche su terrazzi, giardini e aree commerciali. 
-                        Tessuti impermeabili e filtranti, con struttura in acciaio inox o alluminio. Made in Italy.
-                    </p>
-                    <a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a>
+                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 04 — Vele</p>
+                    <h2 class="section-title" style="margin-bottom:20px;">Pergola Vela &<br>Ombrelloni <span style="font-style:italic;">Nautici</span></h2>
+                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Sistemi di ombreggiamento autoportanti o ancorati che applicano le tecnologie e i materiali del mondo nautico all'architettura civile. Linee tese, movimentazioni fluide e massima resistenza per una gestione d'élite dell'ombra e della protezione dall'acqua.</p>
+                    <a href="https://www.progettoombra.it/vele-da-sole" target="_blank" class="deep-link" style="margin-bottom:24px;">🔍 Maggiori informazioni su Vele e Ombrelloni →</a>
+                    <div style="margin-top:32px;"><a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a></div>
                 </div>
                 <div>
-                    <model-viewer src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb" camera-controls auto-rotate rotation-per-second="20deg" touch-action="pan-y" loading="eager" reveal="auto">
-                    </model-viewer>
-                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.3);margin-top:12px;text-align:center;">Modello 3D interattivo — ruota con il dito</p>
+                    <div class="canvas-3d-wrapper"><canvas id="vele-ombrelloni-3d"></canvas></div>
+                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);margin-top:10px;text-align:center;">Modello 3D interattivo</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="border-divider"></div>
+    <div class="bd"></div>
 
-    <!-- Features Grid -->
-    <section class="section" style="text-align:center;">
-        <div class="container" style="max-width:1000px;">
-            <p class="card-label" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Perché Sceglierci</p>
-            <h2 class="section-title" style="margin-bottom:60px;">Valore <span style="font-style:italic;">Artigiano</span></h2>
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:60px;" class="features-grid">
-                <div style="text-align:left;">
-                    <div style="font-size:28px;margin-bottom:20px;font-family:'Cormorant Garamond',serif;">01</div>
-                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;margin-bottom:12px;">Progetto su Misura</h3>
-                    <p style="font-weight:200;font-size:0.9rem;line-height:1.8;color:rgba(28,28,28,0.6);">Ogni pergola e ogni vela è disegnata sulle dimensioni e lo stile del tuo spazio. Sopralluogo e rendering preliminare.</p>
-                </div>
-                <div style="text-align:left;">
-                    <div style="font-size:28px;margin-bottom:20px;font-family:'Cormorant Garamond',serif;">02</div>
-                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;margin-bottom:12px;">Installazione Curata</h3>
-                    <p style="font-weight:200;font-size:0.9rem;line-height:1.8;color:rgba(28,28,28,0.6);">Team specializzato. Montaggio in 1-3 giorni. Senza polvere, senza rumore e senza stress.</p>
-                </div>
-                <div style="text-align:left;">
-                    <div style="font-size:28px;margin-bottom:20px;font-family:'Cormorant Garamond',serif;">03</div>
-                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;margin-bottom:12px;">Garanzia Totale</h3>
-                    <p style="font-weight:200;font-size:0.9rem;line-height:1.8;color:rgba(28,28,28,0.6);">Certificazione di qualità, assistenza post-vendita e copertura assicurativa su tutti i prodotti installati.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="border-divider"></div>
-
-    <!-- CTA Dark / Contact -->
-    <section id="contatti" class="section section-dark" style="text-align:center;">
-        <div class="container" style="max-width:700px;">
-            <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:rgba(249,249,247,0.4);margin-bottom:16px;">Iniziamo un progetto insieme</p>
-            <h2 class="section-title" style="color:#F9F9F7;margin-bottom:16px;">Richiedi una <span style="font-style:italic;">Consulenza</span></h2>
-            <p class="text-light" style="font-weight:200;font-size:0.95rem;line-height:1.8;margin-bottom:48px;">Sopralluogo gratuito, preventivo personalizzato e rendering 3D del tuo spazio prima dell'installazione.</p>
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-                <a href="tel:+39021234567" class="btn-outline btn-outline-light"><i class="fas fa-phone-alt mr-2"></i> Chiama lo Studio</a>
-                <a href="https://wa.me/393901234567" target="_blank" class="btn-outline btn-outline-light"><i class="fab fa-whatsapp mr-2"></i> WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="section" style="padding:80px 0 40px;">
+    <!-- INNOVAZIONE: Tessuto Fotovoltaico -->
+    <section id="innovazione" class="section section-dark">
         <div class="container">
-            <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;" class="footer-grid">
+            <div style="text-align:center;margin-bottom:60px;">
+                <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:12px;">Green Technology</p>
+                <h2 class="section-title" style="color:#F9F9F7;margin-bottom:20px;">Tessuto Fotovoltaico <span style="font-style:italic;">Attivo</span></h2>
+                <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(249,249,247,0.55);max-width:620px;margin:0 auto 24px;">L'evoluzione sostenibile dell'outdoor design. Trasformiamo le coperture tessili di tende e pergole in superfici attive capaci di generare energia pulita per la tua abitazione, unendo l'esigenza di ombreggiamento all'efficienza energetica.</p>
+                <a href="https://www.progettoombra.it/fotovoltaico-outdoor" target="_blank" class="deep-link deep-link-light">🔍 Leggi le specifiche del brevetto su progettoombra.it →</a>
+            </div>
+            <div class="canvas-3d-wrapper" style="height:380px;background:#2a2a2a;max-width:800px;margin:0 auto;"><canvas id="tessuto-fotovoltaico-3d"></canvas></div>
+            <div style="text-align:center;margin-top:32px;"><a href="#contatti" class="btn-primary btn-green" style="padding:16px 40px;">Richiedi Analisi Energetica Outdoor</a></div>
+        </div>
+    </section>
+
+    <div class="bd-light"></div>
+
+    <!-- GRANDI PROGETTI -->
+    <section id="progetti" class="section section-dark">
+        <div class="container">
+            <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:12px;text-align:center;">Grandi Progetti</p>
+            <h2 class="section-title" style="color:#F9F9F7;text-align:center;margin-bottom:60px;">Estensione degli Spazi &<br><span style="font-style:italic;">Architettura</span></h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;" class="grid-progetti">
                 <div>
-                    <div style="font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:2px;margin-bottom:8px;">PROGETTO OMBRA</div>
-                    <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:200;color:rgba(28,28,28,0.4);margin-bottom:24px;">Milano — Outdoor Design</div>
-                    <p style="font-weight:200;font-size:0.85rem;line-height:1.8;color:rgba(28,28,28,0.5);">Dal 2010 progettiamo e installiamo pergole bioclimatiche, vele da sole e sistemi di schermatura solare per privati e aziende a Milano e provincia.</p>
+                    <div class="canvas-3d-wrapper" style="height:260px;background:#2a2a2a;"><canvas id="giardini-inverno-3d"></canvas></div>
+                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#F9F9F7;margin:20px 0 12px;">Giardini d'Inverno e Serre Bioclimatiche</h3>
+                    <p style="font-weight:200;font-size:0.85rem;line-height:1.8;color:rgba(249,249,247,0.5);">Strutture d'élite progettate per ampliare la superficie abitativa. Una stanza di luce ad alto isolamento termico per un'oasi di relax in qualsiasi stagione.</p>
+                    <a href="https://www.progettoombra.it/giardini-inverno" target="_blank" class="deep-link deep-link-light" style="margin-top:12px;">Scopri di più →</a>
                 </div>
                 <div>
-                    <h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Sistemi</h4>
-                    <ul style="list-style:none;font-weight:200;font-size:0.85rem;line-height:2;color:rgba(28,28,28,0.5);">
-                        <li>Pergole Bioclimatiche</li>
-                        <li>Vele da Sole</li>
-                        <li>Tende a Proiezione</li>
-                        <li>Pareti Vetrate</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Azienda</h4>
-                    <ul style="list-style:none;font-weight:200;font-size:0.85rem;line-height:2;color:rgba(28,28,28,0.5);">
-                        <li>Chi Siamo</li>
-                        <li>Progetti</li>
-                        <li>Garanzie</li>
-                        <li>Privacy</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Contatti</h4>
-                    <ul style="list-style:none;font-weight:200;font-size:0.85rem;line-height:2;color:rgba(28,28,28,0.5);">
-                        <li><a href="tel:+39021234567" style="color:inherit;text-decoration:none;">02 12 345 67</a></li>
-                        <li>info@progettoombra.it</li>
-                        <li>Milano — Via Montenapoleone</li>
-                    </ul>
+                    <div class="canvas-3d-wrapper" style="height:260px;background:#2a2a2a;"><canvas id="vetrate-panorami-3d"></canvas></div>
+                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#F9F9F7;margin:20px 0 12px;">Vetrate Panoramiche e Serramenti</h3>
+                    <p style="font-weight:200;font-size:0.85rem;line-height:1.8;color:rgba(249,249,247,0.5);">Sistemi di chiusura minimali con profili micro e vetrate panoramiche a scomparsa totale. Massima luminosità e isolamento termico e acustico.</p>
+                    <a href="https://www.progettoombra.it/vetrate" target="_blank" class="deep-link deep-link-light" style="margin-top:12px;">Scopri di più →</a>
                 </div>
             </div>
-            <div class="border-divider" style="margin-bottom:24px;"></div>
-            <div style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);" class="footer-bottom">
-                <span>&copy; 2026 Progetto Ombra Milano</span>
-                <span>Design e Sviluppo Indipendente</span>
+            <div style="text-align:center;margin-top:60px;">
+                <a href="https://www.progettoombra.it/progetti" target="_blank" class="deep-link deep-link-light" style="font-size:13px;">🔍 Esplora i dettagli di progettazione e i materiali sul sito ufficiale →</a>
             </div>
+        </div>
+    </section>
+
+    <div class="bd-light"></div>
+
+    <!-- LEAD MAGNET: Il Libro -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="split-grid">
+                <div>
+                    <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:12px;">Lead Magnet</p>
+                    <h2 class="section-title" style="color:#F9F9F7;margin-bottom:20px;">Il Libro delle Bioclimatiche<br><span style="font-style:italic;font-size:1.2rem;color:rgba(249,249,247,0.5);">Diana Iannelli</span></h2>
+                    <p style="font-weight:200;font-size:0.9rem;line-height:1.9;color:rgba(249,249,247,0.55);margin-bottom:16px;">La guida definitiva per fare la scelta corretta. Scritto da Diana Iannelli, questo volume racchiude segreti, normative e soluzioni tecniche per progettare la pergola bioclimatica perfetta a Milano, evitando gli errori più comuni.</p>
+                </div>
+                <div>
+                    <form onsubmit="event.preventDefault();alert('Richiesta inviata! Ti contatteremo entro 24 ore.');" style="display:flex;flex-direction:column;gap:14px;">
+                        <input type="text" placeholder="Nome e Cognome" class="form-input form-input-dark" required>
+                        <input type="email" placeholder="Email" class="form-input form-input-dark" required>
+                        <input type="tel" placeholder="Telefono" class="form-input form-input-dark" required>
+                        <input type="hidden" name="lead_source" value="libro_bioclimatiche">
+                        <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Scarica un Estratto Gratuito</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bd-light"></div>
+
+    <!-- POST-VENDITA: Clean Outdoor -->
+    <section class="section section-dark">
+        <div class="container" style="text-align:center;">
+            <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:12px;">Post-Vendita</p>
+            <h2 class="section-title" style="color:#F9F9F7;margin-bottom:20px;">Servizio <span style="font-style:italic;">Clean Outdoor</span></h2>
+            <p style="font-weight:200;font-size:0.95rem;line-height:1.9;color:rgba(249,249,247,0.55);max-width:620px;margin:0 auto 32px;">Ci prendiamo cura del tuo investimento nel tempo. Lavaggio professionale dei tessuti, igienizzazione delle strutture in alluminio, verifica dei sistemi di motorizzazione e ripristino delle guarnizioni per mantenere l'efficienza inalterata negli anni.</p>
+            <a href="#contatti" class="btn-outline btn-outline-light">Prenota un Intervento Clean Outdoor</a>
+        </div>
+    </section>
+
+    <!-- CONTATTI & FORM -->
+    <section id="contatti" class="section">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:60px;">
+                <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Contatti</p>
+                <h2 class="section-title" style="margin-bottom:16px;">Richiedi un <span style="font-style:italic;">Sopralluogo</span></h2>
+                <p style="font-weight:200;color:rgba(28,28,28,0.5);max-width:500px;margin:0 auto;">Vuoi toccare con mano la qualità dei nostri prodotti? Ti aspettiamo nel nostro showroom a Milano.</p>
+            </div>
+            <div class="split-grid" style="gap:60px;">
+                <div>
+                    <div style="display:flex;flex-direction:column;gap:20px;">
+                        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(28,28,28,0.06);"><div style="width:40px;height:40px;border-radius:50%;background:rgba(28,28,28,0.03);display:flex;align-items:center;justify-content:center;"><i class="fas fa-map-pin" style="color:#1C5698;font-size:16px;"></i></div><div><p style="font-weight:400;font-size:14px;">Sede & Showroom</p><p style="font-weight:200;font-size:13px;color:rgba(28,28,28,0.5);">Milano (MI)</p></div></div>
+                        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(28,28,28,0.06);"><div style="width:40px;height:40px;border-radius:50%;background:rgba(28,28,28,0.03);display:flex;align-items:center;justify-content:center;"><i class="fas fa-globe" style="color:#1C5698;font-size:16px;"></i></div><div><p style="font-weight:400;font-size:14px;">Sito Ufficiale</p><a href="https://www.progettoombra.it" target="_blank" style="font-weight:200;font-size:13px;color:#1C5698;text-decoration:none;">www.progettoombra.it</a></div></div>
+                        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(28,28,28,0.06);"><div style="width:40px;height:40px;border-radius:50%;background:rgba(28,28,28,0.03);display:flex;align-items:center;justify-content:center;"><i class="fas fa-phone" style="color:#1C5698;font-size:16px;"></i></div><div><p style="font-weight:400;font-size:14px;">Telefono</p><a href="tel:+39021234567" style="font-weight:200;font-size:13px;color:#1C5698;text-decoration:none;">02 12 345 67</a></div></div>
+                    </div>
+                </div>
+                <div>
+                    <form onsubmit="event.preventDefault();alert('Richiesta inviata! Ti contatteremo entro 24 ore per fissare il sopralluogo.');" style="display:flex;flex-direction:column;gap:14px;">
+                        <input type="text" placeholder="Nome e Cognome" class="form-input" required>
+                        <input type="email" placeholder="Email" class="form-input" required>
+                        <input type="tel" placeholder="Telefono" class="form-input" required>
+                        <textarea placeholder="Descrivi brevemente il tuo progetto..." class="form-input" rows="3" style="resize:none;"></textarea>
+                        <input type="hidden" name="lead_source" value="sopralluogo_diretto">
+                        <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Richiedi Sopralluogo Gratuito</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="padding:60px 0 32px;border-top:1px solid rgba(28,28,28,0.06);">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:48px;" class="footer-grid">
+                <div><div style="font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:2px;margin-bottom:4px;">PROGETTO OMBRA</div><div style="font-size:8px;letter-spacing:3px;text-transform:uppercase;font-weight:200;color:rgba(28,28,28,0.3);margin-bottom:20px;">Milano — Outdoor Design</div><p style="font-weight:200;font-size:0.8rem;line-height:1.9;color:rgba(28,28,28,0.4);">Sistemi di copertura, pergole bioclimatiche, vele e schermature solari. Design e innovazione per esterni a Milano dal 2010.</p></div>
+                <div><h4 style="font-weight:400;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Sistemi</h4><ul style="list-style:none;font-weight:200;font-size:0.8rem;line-height:2;color:rgba(28,28,28,0.4);"><li>Pergole Bioclimatiche</li><li>Vele da Sole</li><li>Tende a Proiezione</li><li>Pareti Vetrate</li></ul></div>
+                <div><h4 style="font-weight:400;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Contatti</h4><ul style="list-style:none;font-weight:200;font-size:0.8rem;line-height:2;color:rgba(28,28,28,0.4);"><li><a href="tel:+39021234567" style="color:inherit;text-decoration:none;">02 12 345 67</a></li><li>info@progettoombra.it</li><li>Milano — Showroom</li></ul></div>
+            </div>
+            <div class="bd" style="margin-bottom:20px;"></div>
+            <div style="display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(28,28,28,0.2);flex-wrap:wrap;gap:12px;"><span>&copy; 2026 Progetto Ombra Milano</span><span>Design & Sviluppo Indipendente</span><a href="https://www.progettoombra.it" target="_blank" style="color:inherit;text-decoration:none;">www.progettoombra.it</a></div>
         </div>
     </footer>
 
     <script>
-        // Menu toggle
-        const mt = document.getElementById('menu-toggle');
-        const mm = document.getElementById('mobile-menu');
-        if(mt) mt.addEventListener('click', () => { mm.style.display = mm.style.display === 'none' || mm.style.display === '' ? 'block' : 'none'; });
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', function(e) {
-                const h = this.getAttribute('href');
-                if(h && h.startsWith('#')) { e.preventDefault(); const t = document.querySelector(h); if(t) t.scrollIntoView({behavior:'smooth'}); }
-                if(mm) mm.style.display = 'none';
-            });
+        // Mobile menu
+        const mt=document.getElementById('menu-toggle'),mm=document.getElementById('mobile-menu');
+        if(mt) mt.addEventListener('click',()=>{mm.style.display=mm.style.display==='none'||mm.style.display===''?'block':'none'});
+        document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const h=this.getAttribute('href');if(h&&h.startsWith('#')){e.preventDefault();const t=document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth'})}if(mm)mm.style.display='none'})});
+        function checkWidth(){const dn=document.querySelector('.desktop-nav'),mb=document.querySelector('.menu-btn');if(window.innerWidth<=768){dn.style.display='none';mb.style.display='block'}else{dn.style.display='flex';mb.style.display='none';if(mm)mm.style.display='none'}}
+        checkWidth();window.addEventListener('resize',checkWidth);
+        // 3D Canvas init with model-viewer fallback
+        document.querySelectorAll('.canvas-3d-wrapper').forEach((wrapper,idx)=>{
+            const canvas=wrapper.querySelector('canvas');
+            if(canvas){
+                const urls=['https://modelviewer.dev/shared-assets/models/Chair.glb','https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb','https://modelviewer.dev/shared-assets/models/Chair.glb','https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb','https://modelviewer.dev/shared-assets/models/Chair.glb','https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb','https://modelviewer.dev/shared-assets/models/Chair.glb','https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb'];
+                const mv=document.createElement('model-viewer');
+                mv.setAttribute('src',urls[idx % urls.length]);
+                mv.setAttribute('camera-controls','');
+                mv.setAttribute('auto-rotate','');
+                mv.setAttribute('rotation-per-second','25deg');
+                mv.setAttribute('touch-action','pan-y');
+                mv.style.width='100%';mv.style.height='100%';mv.style.display='block';
+                canvas.parentNode.replaceChild(mv,canvas);
+            }
         });
-        // Responsive nav
-        function checkWidth() {
-            const dn = document.querySelector('.desktop-nav');
-            const mb = document.querySelector('.menu-btn');
-            if(window.innerWidth <= 768) { dn.style.display = 'none'; mb.style.display = 'block'; }
-            else { dn.style.display = 'flex'; mb.style.display = 'none'; if(mm) mm.style.display = 'none'; }
-        }
-        checkWidth(); window.addEventListener('resize', checkWidth);
+        // Scroll reveal
+        const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:0.1});
+        document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
     </script>
 </body>
 </html>
