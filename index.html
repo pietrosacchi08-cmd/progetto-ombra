@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetto Ombra Milano | Soluzioni Outdoor di Lusso, Pergole e Terrazzi</title>
-    <meta name="description" content="Progetto Ombra Milano: General Contractor d'eccellenza per la progettazione e realizzazione di giardini, terrazzi, pergole bioclimatiche e pavimentazioni esterne di lusso.">
+    <title>Progetto Ombra Milano | Soluzioni Outdoor & Design di Lusso</title>
+    <meta name="description" content="General Contractor d'eccellenza a Milano per la progettazione di giardini, terrazzi, pergole bioclimatiche e serramenti.">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <style>
         :root {
-            --primary: #111;
-            --secondary: #00a8cc;
-            --light: #f9f9f9;
-            --text: #333;
-            --gray: #ebeebe;
+            --primary: #1a1a1a;
+            --accent: #008080; /* Teal/Turchese elegante */
+            --bg-light: #fcfcfc;
+            --text: #333333;
+            --font-main: 'Helvetica Neue', Arial, sans-serif;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
         }
 
         body {
-            background-color: var(--light);
+            font-family: var(--font-main);
+            background-color: var(--bg-light);
             color: var(--text);
             overflow-x: hidden;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
-        /* 3D Canvas Container */
-        #canvas-3d-container {
+        /* 3D Scene Wrapper */
+        #interactive-3d-bg {
             position: fixed;
             top: 0;
             left: 0;
@@ -38,530 +40,544 @@
             height: 100vh;
             z-index: -1;
             pointer-events: none;
-            opacity: 0.6;
+            opacity: 0.4;
         }
 
+        /* --- STRUTTURA LAYOUT CONCORDATA --- */
+        
+        /* Header Istituzionale */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #ddd;
-            padding: 20px;
+            background: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            padding: 30px 20px;
             text-align: center;
+            letter-spacing: 4px;
         }
 
         header h1 {
-            font-size: 1.8rem;
-            letter-spacing: 2px;
+            font-size: 2rem;
             text-transform: uppercase;
+            font-weight: 300;
             color: var(--primary);
         }
 
-        /* Hero Banner */
-        .hero {
-            position: relative;
-            padding: 60px 20px;
+        /* Banner d'apertura / Copertina */
+        .hero-banner {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
             text-align: center;
-            background: #fff;
-            margin-bottom: 40px;
-            border-bottom: 4px solid var(--secondary);
         }
 
-        .hero img {
-            max-width: 100%;
+        .hero-banner img {
+            width: 100%;
             height: auto;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
 
-        .container {
+        /* Contenitore Principale */
+        .main-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .section-title {
+        /* Titoli delle Categorie della Struttura Originale */
+        .category-title {
+            font-size: 1.4rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin: 40px 0 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary);
+            letter-spacing: 2px;
             color: var(--primary);
+            margin: 60px 0 30px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--primary);
+            font-weight: 400;
         }
 
-        /* Griglia dei Servizi */
-        .grid {
+        /* Struttura a Blocchi Alberata e Pulita */
+        .product-structure {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
             margin-bottom: 40px;
         }
 
-        .card {
-            background: #fff;
-            border-radius: 8px;
+        @media (max-width: 768px) {
+            .product-structure {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .product-block {
+            background: #ffffff;
+            border: 1px solid #f0f0f0;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
+            transition: all 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .product-block:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
 
-        .card-img-wrapper {
+        .image-container {
+            width: 100%;
+            height: 450px; /* Altezza verticale per valorizzare l'architettura outdoor */
+            overflow: hidden;
             position: relative;
-            overflow: hidden;
-            padding-top: 100%; /* Rapporto 1:1 quadrato perfetto per i tuoi blocchi */
         }
 
-        .card img {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
 
-        .card:hover .card-img-wrapper img {
-            transform: scale(1.05);
+        .product-block:hover .image-container img {
+            transform: scale(1.03);
         }
 
-        .card-content {
-            padding: 20px;
-            text-align: center;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .block-details {
+            padding: 25px;
+            background: #ffffff;
         }
 
-        .card h3 {
+        .block-details h3 {
             font-size: 1.1rem;
             text-transform: uppercase;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-            color: #222;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: var(--primary);
         }
 
-        .btn-discover {
+        .block-details p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .action-link {
             display: inline-block;
-            margin-top: auto;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
             text-decoration: none;
-            color: #555;
-            font-size: 0.9rem;
-            font-weight: 500;
+            font-weight: bold;
             transition: color 0.2s;
         }
 
-        .btn-discover:hover {
-            color: var(--secondary);
+        .action-link:hover {
+            color: var(--accent);
         }
 
-        .btn-discover::after {
-            content: ' \203A';
-            font-size: 1.1rem;
-        }
-
-        /* Libri ed Eventi Speciali */
-        .featured-banner {
-            background: #fff;
+        /* Sezione Focus Libro di Diana Iannelli */
+        .book-focus {
+            background: #ffffff;
+            border: 1px solid #eaeaea;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
-            gap: 30px;
+            margin: 60px 0;
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin: 40px 0;
         }
 
-        .featured-banner .banner-img {
-            flex: 1 1 300px;
-            max-width: 400px;
+        @media (max-width: 768px) {
+            .book-focus {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
         }
 
-        .featured-banner .banner-img img {
+        .book-cover {
+            flex: 0 0 300px;
+            margin-right: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .book-cover {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+        .book-cover img {
             width: 100%;
             height: auto;
-            border-radius: 4px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
-        .featured-banner .banner-text {
-            flex: 2 1 400px;
-        }
-
-        .featured-banner h2 {
+        .book-info h2 {
+            font-size: 1.5rem;
             text-transform: uppercase;
+            letter-spacing: 1.5px;
             margin-bottom: 15px;
         }
 
+        .book-info p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
         footer {
-            background: var(--primary);
-            color: #fff;
+            background: #111111;
+            color: #ffffff;
             padding: 40px 20px;
             text-align: center;
-            margin-top: 60px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-top: 80px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Sfondo 3D Interattivo -->
-    <div id="canvas-3d-container"></div>
+    <div id="interactive-3d-bg"></div>
 
     <header>
         <h1>Progetto Ombra Milano</h1>
     </header>
 
-    <!-- Sezione Ecologia e Innovazione (Banner Principale) -->
-    <section class="hero container">
-        <img src="Rivoluziona il tuo spazio esterno con l'energia pulita del tessuto fotovoltaico!.jpeg" alt="Tessuto fotovoltaico per esterno - Progetto Ombra Milano">
-    </section>
+    <div class="hero-banner">
+        <img src="Rivoluziona il tuo spazio esterno con l'energia pulita del tessuto fotovoltaico!.jpeg" alt="Tessuto fotovoltaico per l'efficienza energetica outdoor">
+    </div>
 
-    <main class="container">
+    <main class="main-content">
 
-        <!-- SEZIONE 1: ECCELLENZA E PROGETTAZIONE -->
-        <h2 class="section-title">General Contractor & Progettazione</h2>
-        <div class="grid">
+        <h2 class="category-title">01 / Architettura & General Contractor</h2>
+        <div class="product-structure">
             
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="General contractor d'eccellenza.jpeg" alt="General Contractor d'Eccellenza Milano">
+            <div class="product-block">
+                <div class="image-container">
+                    <img src="General contractor d'eccellenza.jpeg" alt="General Contractor d'eccellenza Milano">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>General Contractor d'Eccellenza</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Coordinamento completo e soluzioni chiavi in mano per spazi esterni residenziali e commerciali di lusso.</p>
+                    <a href="#" class="action-link">Esplora il servizio &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="Progettazione di giardini e terrazzi milano.jpeg" alt="Progettazione di giardini e terrazzi Milano">
+            <div class="product-block">
+                <div class="image-container">
+                    <img src="Progettazione di giardini e terrazzi milano.jpeg" alt="Progettazione di giardini e terrazzi milano">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Progettazione Giardini e Terrazzi Milano</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Studio del verde, dei flussi visivi e dell'illuminazione per creare oasi urbane su misura.</p>
+                    <a href="#" class="action-link">Vedi i dettagli &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="Progettazione terrazzi.jpeg" alt="Progettazione Terrazzi e Spazi Outdoor">
+            <div class="product-block">
+                <div class="image-container">
+                    <img src="Progettazione terrazzi.jpeg" alt="Progettazione terrazzi">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Progettazione Terrazzi</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Ottimizzazione delle volumetrie e arredi outdoor integrati per attici e terrazze di prestigio.</p>
+                    <a href="#" class="action-link">Scopri di più &rarr;</a>
                 </div>
             </div>
 
         </div>
 
-        <!-- SEZIONE 2: PERGOLE E COPERTURE -->
-        <h2 class="section-title">Pergole, Bioclimatiche e Tende</h2>
-        <div class="grid">
 
-            <div class="card">
-                <div class="card-img-wrapper">
+        <h2 class="category-title">02 / Pergole, Bioclimatiche & Serramenti</h2>
+        <div class="product-structure">
+
+            <div class="product-block">
+                <div class="image-container">
                     <img src="Bioclimatiche pergole con lamelle orientabili bris.jpeg" alt="Bioclimatiche pergole con lamelle orientabili bris">
                 </div>
-                <div class="card-content">
-                    <h3>Bioclimatiche Pergole con Lamelle Orientabili Bris</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                <div class="block-details">
+                    <h3>Bioclimatiche con Lamelle Orientabili Bris</h3>
+                    <p>Regolazione millimetrica della luce e della ventilazione naturale per un comfort climatico perfetto.</p>
+                    <a href="#" class="action-link">Richiedi Info &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
+            <div class="product-block">
+                <div class="image-container">
                     <img src="Bioclimatiche le prime al mondo a tenuta neve.jpeg" alt="Bioclimatiche le prime al mondo a tenuta neve">
                 </div>
-                <div class="card-content">
-                    <h3>Bioclimatiche le prime al mondo a tenuta neve</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                <div class="block-details">
+                    <h3>Bioclimatiche a Tenuta Neve</h3>
+                    <p>Ingegneria d'avanguardia progettata per resistere ai massimi carichi atmosferici invernali.</p>
+                    <a href="#" class="action-link">Scheda Tecnica &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="Pergole in alluminio acciaio e legno, pergolati.jpeg" alt="Pergole in alluminio, acciaio e legno">
+            <div class="product-block">
+                <div class="image-container">
+                    <img src="Pegole in alluminio acciaio e legno, pergolati.jpeg" alt="Pegole in alluminio acciaio e legno, pergolati">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Pergole in Alluminio, Acciaio e Legno</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Strutture portanti e pergolati d'alto profilo materico per ogni esigenza stilistica e architettonica.</p>
+                    <a href="#" class="action-link">Sfoglia Modelli &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="Giardini d'inverno pergole e pergolati serre verande.jpeg" alt="Giardini d'inverno, serre e verande">
+            <div class="product-block">
+                <div class="image-container">
+                    <img src="Giardini d'inverno pergole e pergolati serre verande.jpeg" alt="Giardini d'inverno pergole e pergolati serre verande">
                 </div>
-                <div class="card-content">
-                    <h3>Giardini d'Inverno, Serre e Verande</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                <div class="block-details">
+                    <h3>Giardini d'Inverno & Verande</h3>
+                    <p>Ampliamenti volumetrici trasparenti e serre bioclimatiche per vivere l'outdoor tutto l'anno.</p>
+                    <a href="#" class="action-link">Vedi Realizzazioni &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
+            <div class="product-block">
+                <div class="image-container">
                     <img src="Pergola vela, protezione acqua per terrazze e giardini.jpeg" alt="Pergola vela, protezione acqua per terrazze e giardini">
                 </div>
-                <div class="card-content">
-                    <h3>Pergola Vela: Protezione Acqua per Terrazze e Giardini</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                <div class="block-details">
+                    <h3>Pergola Vela Idrorepellente</h3>
+                    <p>Protezione avanzata dall'acqua e dai raggi UV unita a linee nautiche ultra-leggere.</p>
+                    <a href="#" class="action-link">Dettagli Tecnici &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
+            <div class="product-block">
+                <div class="image-container">
                     <img src="Vele da sole Milano.jpeg" alt="Vele da sole Milano">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Vele da Sole Milano</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Sistemi di ombreggiamento a vela fissi o automatizzati con tensionamento di derivazione nautica.</p>
+                    <a href="#" class="action-link">Configura &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
+            <div class="product-block">
+                <div class="image-container">
                     <img src="La prima tenda da sole con cassonetto e minimo ingombro.jpeg" alt="La prima tenda da sole con cassonetto e minimo ingombro">
                 </div>
-                <div class="card-content">
-                    <h3>La Prima Tenda da Sole con Cassonetto e Minimo Ingombro</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                <div class="block-details">
+                    <h3>Tende da Sole a Cassonetto Minimal</h3>
+                    <p>Integrazione a scomparsa totale e minimo ingombro visivo sulla facciata dell'edificio.</p>
+                    <a href="#" class="action-link">Guarda il Meccanismo &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="Ombrelloni per esterno.jpeg" alt="Ombrelloni per esterni di design">
+            <div class="product-block">
+                <div class="image-container">
+                    <img src="Ombrellon per esterno.jpeg" alt="Ombrellon per esterno">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Ombrelloni per Esterno</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Coperture stabili a palo centrale o laterale ideali per dehors commerciali e giardini privati.</p>
+                    <a href="#" class="action-link">Catalogo Ombrelloni &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
+            <div class="product-block">
+                <div class="image-container">
                     <img src="Vetrate, infissi, finestre e serramenti per verande.jpeg" alt="Vetrate, infissi, finestre e serramenti per verande">
                 </div>
-                <div class="card-content">
-                    <h3>Vetrate, Infissi e Serramenti per Verande</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                <div class="block-details">
+                    <h3>Vetrate e Serramenti per Verande</h3>
+                    <p>Sistemi vetrati scorrevoli o pieghevoli ad alto isolamento termico e massima trasparenza.</p>
+                    <a href="#" class="action-link">Profili e Finiture &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
+            <div class="product-block">
+                <div class="image-container">
                     <img src="Pensiline in policarbonato e vetro.jpeg" alt="Pensiline in policarbonato e vetro">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Pensiline in Policarbonato e Vetro</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Protezione trasparente per ingressi e camminamenti dal design geometrico pulito ed essenziale.</p>
+                    <a href="#" class="action-link">Vedi Varianti &rarr;</a>
                 </div>
             </div>
 
         </div>
 
-        <!-- SEZIONE 3: PAVIMENTAZIONI -->
-        <h2 class="section-title">Pavimentazioni per Esterni</h2>
-        <div class="grid">
 
-            <div class="card">
-                <div class="card-img-wrapper">
+        <h2 class="category-title">03 / Superfici & Pavimentazioni</h2>
+        <div class="product-structure">
+
+            <div class="product-block">
+                <div class="image-container">
                     <img src="Pavimentazione galleggiante per esterno.jpeg" alt="Pavimentazione galleggiante per esterno">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Pavimentazione Galleggiante per Esterno</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Sistemi sopraelevati ideali per nascondere impianti e garantire un perfetto drenaggio dell'acqua.</p>
+                    <a href="#" class="action-link">Specifiche Posa &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
-                    <img src="Pavimentazioni in gres simil legno galleggiante per esterni certificato.jpeg" alt="Pavimentazioni in gres simil legno galleggiante certificato">
+            <div class="product-block">
+                <div class="image-container">
+                    <img src="Pavimentazioni in gres simil legno galleggiante per esterni certificato.jpeg" alt="Pavimentazioni in gres simil legno galleggiante per esterni certificato">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Gres Simil Legno Galleggiante Certificato</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Il calore naturale del legno unito alla resistenza eterna e alle certificazioni antiscivolo del gres.</p>
+                    <a href="#" class="action-link">Collezioni &rarr;</a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-img-wrapper">
+            <div class="product-block">
+                <div class="image-container">
                     <img src="Pavimentazione simil pietra in gres porcellanato.jpeg" alt="Pavimentazione simil pietra in gres porcellanato">
                 </div>
-                <div class="card-content">
+                <div class="block-details">
                     <h3>Pavimentazione Simil Pietra in Gres Porcellanato</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                    <p>Finiture materiche ad altissimo impatto estetico per camminamenti, bordi piscina e terrazzi.</p>
+                    <a href="#" class="action-link">Richiedi Campione &rarr;</a>
                 </div>
             </div>
 
         </div>
 
-        <!-- SEZIONE 4: MANUTENZIONE -->
-        <h2 class="section-title">Cura & Manutenzione</h2>
-        <div class="grid">
-            <div class="card" style="max-width: 380px; margin: 0 auto;">
-                <div class="card-img-wrapper">
-                    <img src="Lavare pergole bioclimatiche manutenzione verande, tende clean outdoor.jpeg" alt="Lavaggio e manutenzione pergole bioclimatiche - Clean Outdoor">
+
+        <h2 class="category-title">04 / Cura, Manutenzione & Lavaggio</h2>
+        <div class="product-structure" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto 60px auto;">
+            
+            <div class="product-block">
+                <div class="image-container" style="height: 350px;">
+                    <img src="Lavare pergole bioclimatiche manutenzione verande, tende clean outdoor .jpeg" alt="Lavare pergole bioclimatiche manutenzione verande, tende clean outdoor">
                 </div>
-                <div class="card-content">
-                    <h3>Lavare Pergole Bioclimatiche & Manutenzione Verande</h3>
-                    <a href="#" class="btn-discover">Scopri di più</a>
+                <div class="block-details" style="text-align: center;">
+                    <h3>Manutenzione Specialistica & Clean Outdoor</h3>
+                    <p>Trattamenti dedicati e lavaggio profondo di strutture bioclimatiche, vetrate e tessuti tecnici per preservarne l'efficienza nel tempo.</p>
+                    <a href="#" class="action-link">Prenota un Intervento &rarr;</a>
                 </div>
             </div>
+
         </div>
 
-        <!-- FOCUS BANNER: IL LIBRO -->
-        <div class="featured-banner">
-            <div class="banner-img">
-                <img src="Il libro: scopri le bioclimatiche.jpeg" alt="Libro: Scopri le Bioclimatiche di Diana Iannelli">
+
+        <div class="book-focus">
+            <div class="book-cover">
+                <img src="Il libro scopri le bioclimatiche.jpeg" alt="Il libro scopri le bioclimatiche di Diana Iannelli">
             </div>
-            <div class="banner-text">
+            <div class="book-info">
                 <h2>Il Libro: Scopri le Bioclimatiche</h2>
-                <p style="color:#666; margin-bottom: 20px;">Scritto da Diana Iannelli. Una guida esclusiva e completa per comprendere l'architettura bioclimatica, la gestione degli spazi esterni di prestigio e come scegliere la copertura perfetta per valorizzare il tuo immobile.</p>
-                <a href="#" class="btn-discover">Richiedi la tua copia</a>
+                <p>Un'opera firmata da <strong>Diana Iannelli</strong> dedicata alla cultura dell'outdoor design e dell'architettura solare. All'interno troverai approfondimenti normativi, analisi dei materiali di ultima generazione e linee guida per valorizzare il patrimonio immobiliare grazie all'inserimento strategico delle strutture bioclimatiche.</p>
+                <a href="#" class="action-link" style="color: var(--accent);">Richiedi una Copia Dedicata &rarr;</a>
             </div>
         </div>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Progetto Ombra Milano. Tutti i diritti riservati.</p>
+        <p>&copy; 2026 Progetto Ombra Milano. Eccellenza e Innovazione Spazi Outdoor.</p>
     </footer>
 
-    <!-- SCRIPT LOGICA 3D CON THREE.JS -->
+
     <script>
-        // Setup base della scena 3D
-        const container = document.getElementById('canvas-3d-container');
+        // Setup iniziale della Scena 3D nello sfondo
+        const container3D = document.getElementById('interactive-3d-bg');
         const scene = new THREE.Scene();
         
-        // Camera
-        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 30;
+        // Prospettiva ed Angolo della Camera
+        const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 25;
 
-        // Renderer
+        // Inizializzazione Renderer con trasparenza nativa per non coprire il background
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        container.appendChild(renderer.domElement);
+        container3D.appendChild(renderer.domElement);
 
-        // Illuminazione artistica (Luci soffuse da showroom)
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
-        scene.add(ambientLight);
+        // Illuminazione Ambientale Chiara ed Elegante
+        const lightAmbient = new THREE.AmbientLight(0xffffff, 0.75);
+        scene.add(lightAmbient);
 
-        const directionalLight = new THREE.DirectionalLight(0x00a8cc, 0.8); // Luce turchese aziendale
-        directionalLight.position.set(10, 20, 10);
-        scene.add(directionalLight);
+        // Luce Direzionale d'accento che riprende il colore Teal/Aziendale
+        const lightDirectional = new THREE.DirectionalLight(0x008080, 0.8);
+        lightDirectional.position.set(15, 25, 10);
+        scene.add(lightDirectional);
 
-        const secondaryLight = new THREE.DirectionalLight(0xffffff, 0.5);
-        secondaryLight.position.set(-10, -10, 10);
-        scene.add(secondaryLight);
+        const items3D = [];
 
-        // Array per contenere gli oggetti 3D animati
-        const objectsArray = [];
-
-        // Funzione per creare materiali geometrici eleganti ed astratti
-        // Rappresentano elementi architettonici (vetrate, lamelle, elementi naturali)
-        function create3DEnvironment() {
+        // Generazione elementi astratti tridimensionali (Rappresentano Pannelli di Vetro e Listelli)
+        function build3DShapes() {
+            // Geometria dei pannelli traslucidi (richiamo a vetrate, lame e schermature)
+            const panelGeometry = new THREE.BoxGeometry(5, 3, 0.05);
             
-            // 1. Pannelli Geometrici Sottili (Richiamo a Vetrate, Infissi e Lamelle)
-            const panelGeo = new THREE.BoxGeometry(4, 4, 0.1);
-            const glassMaterial = new THREE.MeshPhysicalMaterial({
+            const architecturalMaterial = new THREE.MeshPhysicalMaterial({
                 color: 0xffffff,
                 transparent: true,
-                opacity: 0.3,
-                roughness: 0.1,
-                transmission: 0.9, // Effetto vetro trasparente
+                opacity: 0.25,
+                roughness: 0.2,
+                transmission: 0.8,
                 side: THREE.DoubleSide
             });
 
-            for(let i=0; i<8; i++) {
-                const mesh = new THREE.Mesh(panelGeo, glassMaterial);
+            for(let i = 0; i < 10; i++) {
+                const mesh = new THREE.Mesh(panelGeometry, architecturalMaterial);
                 mesh.position.set(
-                    (Math.random() - 0.5) * 40,
-                    (Math.random() - 0.5) * 40,
-                    (Math.random() - 0.5) * 20
-                );
-                mesh.rotation.set(Math.random() * 2, Math.random() * 2, Math.random() * 2);
-                scene.add(mesh);
-                objectsArray.push({ mesh: mesh, speedX: (Math.random()-0.5)*0.01, speedY: (Math.random()-0.5)*0.01, rotSpeed: 0.002 });
-            }
-
-            // 2. Elementi organici fluttuanti (Richiamo a petali/foglie per la progettazione Giardini)
-            const leafGeo = new THREE.ConeGeometry(0.6, 1.5, 3);
-            const leafMaterial = new THREE.MeshLambertMaterial({
-                color: 0x889977,
-                transparent: true,
-                opacity: 0.6
-            });
-
-            for(let i=0; i<15; i++) {
-                const mesh = new THREE.Mesh(leafGeo, leafMaterial);
-                mesh.position.set(
-                    (Math.random() - 0.5) * 50,
-                    (Math.random() - 0.5) * 50,
+                    (Math.random() - 0.5) * 35,
+                    (Math.random() - 0.5) * 35,
                     (Math.random() - 0.5) * 15
                 );
-                mesh.rotation.set(Math.random() * 3, Math.random() * 3, Math.random() * 3);
+                mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
                 scene.add(mesh);
-                objectsArray.push({ mesh: mesh, speedX: (Math.random()-0.5)*0.015, speedY: -0.01 - Math.random()*0.01, rotSpeed: 0.005 });
+
+                items3D.push({
+                    mesh: mesh,
+                    rotSpeedX: 0.001,
+                    rotSpeedY: 0.002,
+                    driftY: (Math.random() - 0.5) * 0.005
+                });
             }
         }
 
-        create3DEnvironment();
+        build3DShapes();
 
-        // Effetto interattivo basato sullo Scroll della pagina
-        let scrollY = window.scrollY;
+        // Controllo dinamico dello scroll per spostare gli elementi 3D in profondità
+        let currentScroll = window.scrollY;
         window.addEventListener('scroll', () => {
-            scrollY = window.scrollY;
+            currentScroll = window.scrollY;
         });
 
-        // Gestione del ridimensionamento finestra
+        // Ottimizzazione del Responsive per cambi orientamento e resize dello schermo
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        // Loop di animazione continuo
-        function animate() {
-            requestAnimationFrame(animate);
+        // Loop di Rendering Continuo ed Animazione Fluidodinamica
+        function renderLoop() {
+            requestAnimationFrame(renderLoop);
 
-            // Muove gli elementi nello sfondo in base al tempo e allo scroll
-            objectsArray.forEach((item, index) => {
-                // Movimento continuo naturale fluttuante
-                item.mesh.position.x += item.speedX;
-                item.mesh.position.y += item.speedY;
-                item.mesh.rotation.x += item.rotSpeed;
-                item.mesh.rotation.y += item.rotSpeed * 1.5;
+            items3D.forEach((item, index) => {
+                // Rotazione costante e delicata nello spazio
+                item.mesh.rotation.x += item.rotSpeedX;
+                item.mesh.rotation.y += item.rotSpeedY;
+                item.mesh.position.y += item.driftY;
 
-                // Modifica reattiva delicata basata sullo scrolling dell'utente
-                item.mesh.position.y += (scrollY * 0.0005) * (index % 2 === 0 ? 1 : -1) * 0.05;
+                // Spostamento interattivo basato sullo scroll reale dell'utente
+                item.mesh.position.y += (currentScroll * 0.0003) * (index % 2 === 0 ? 0.02 : -0.02);
 
-                // Reset della posizione se escono troppo dallo schermo (effetto loop infinito)
-                if(item.mesh.position.y < -25) item.mesh.position.y = 25;
-                if(item.mesh.position.y > 25) item.mesh.position.y = -25;
-                if(item.mesh.position.x < -30) item.mesh.position.x = 30;
-                if(item.mesh.position.x > 30) item.mesh.position.x = -30;
+                // Riposizionamento se gli elementi escono dai margini dell'inquadratura
+                if (item.mesh.position.y < -20) item.mesh.position.y = 20;
+                if (item.mesh.position.y > 20) item.mesh.position.y = -20;
             });
 
-            // Leggero movimento della camera basato sullo scroll generale per dare profondità cinematografica
-            camera.position.y = -scrollY * 0.02;
+            // Movimento accennato della telecamera sullo scroll per dare l'effetto di parallasse 3D
+            camera.position.y = -currentScroll * 0.015;
 
             renderer.render(scene, camera);
         }
 
-        animate();
+        renderLoop();
     </script>
 </body>
 </html>
