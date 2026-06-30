@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
@@ -62,6 +63,10 @@
         .form-input-dark::placeholder{color:rgba(249,249,247,0.3)}
         .fade-up{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.23,1,0.32,1)}
         .fade-up.show{opacity:1;transform:translateY(0)}
+        .tilt-card{transform-style:preserve-3d;will-change:transform;transition:transform 0.1s ease;cursor:pointer;position:relative}
+        .tilt-card-inner{transform:translateZ(20px);position:relative;z-index:2}
+        .tilt-card-shine{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,transparent 50%);pointer-events:none;z-index:3;border-radius:inherit;opacity:0;transition:opacity 0.3s}
+        .tilt-card:hover .tilt-card-shine{opacity:1}
         @keyframes pulse-wa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.3)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.5)}}
         @media(max-width:768px){.hero-canvas{height:90vh}}
     </style>
@@ -198,6 +203,95 @@
     </section>
 
     <div class="bd"></div>
+
+    <!-- CATALOGO 3D TILT -->
+    <section class="section section-dark" style="padding:100px 0 120px;">
+        <div class="container" style="text-align:center;">
+            <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:10px;">Catalogo Completo</p>
+            <h2 class="section-title" style="color:#F9F9F7;margin-bottom:12px;">Esplora i Nostri <span style="font-style:italic;">Sistemi</span></h2>
+            <p style="font-weight:200;font-size:0.9rem;color:rgba(249,249,247,0.4);max-width:500px;margin:0 auto 50px;">Muovi il mouse sopra ogni card per esplorare i dettagli in 3D</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;" class="catalog-grid">
+                <a href="https://www.progettoombra.it/vetrate" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop" alt="Vetrate e Infissi" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Vetrate e Infissi</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/pensiline" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&h=400&fit=crop" alt="Pensiline" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Pensiline</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/giardini-inverno" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=600&h=400&fit=crop" alt="Giardini d'Inverno" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Giardini d'Inverno</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/ombrelloni" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=600&h=400&fit=crop" alt="Ombrelloni Premium" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Ombrelloni Premium</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/vele-da-sole" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=600&h=400&fit=crop" alt="Vele da Sole" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Vele da Sole</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/clean-outdoor" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop" alt="Clean Outdoor" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Servizio</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Clean Outdoor</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/libro" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#2a2a2a;"><div style="font-size:60px;opacity:0.3;">📘</div></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Lead Magnet</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Il Libro — Diana Iannelli</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/fotovoltaico" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop" alt="Tessuto Fotovoltaico" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Green Tech</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Tessuto Fotovoltaico</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/pergole-strutturali" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" alt="Pergole Strutturali" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Pergole Strutturali</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/tende-tecniche" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&h=400&fit=crop" alt="Tende Tecniche" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Tende Tecniche</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/tende-cassonetto" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607687644-c94bf556f42e?w=600&h=400&fit=crop" alt="Tenda Cassonetto" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Tenda Cassonetto</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/pergola-bioclimatica" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" alt="Pergola Bioclimatica Retrattile" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Bioclimatica Retrattile</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/pergole-tradizionali" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&h=400&fit=crop" alt="Pergole Tradizionali" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Pergole Tradizionali</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/pergola-classica" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop" alt="Pergola Bioclimatica Classica" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Bioclimatica Classica</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/showroom" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607687644-c94bf556f42e?w=600&h=400&fit=crop" alt="Showroom" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Visita</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Showroom e Uffici</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/sicurezza" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop" alt="Sicurezza" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Certificazione</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Ingegnerizzazione e Sicurezza</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/diana-iannelli" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#2a2a2a;"><div style="font-size:50px;opacity:0.3;">👩‍💼</div></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">General Contractor</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Diana Iannelli</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/contract" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="Outdoor Contractor" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Contract</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Outdoor Contractor</div></div>
+                </a>
+                <a href="https://www.progettoombra.it/design-concept" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
+                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop" alt="Outdoor Design" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Design</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Outdoor Design Concept</div></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="bd-light"></div>
 
     <!-- INNOVAZIONE: Tessuto Fotovoltaico -->
     <section id="innovazione" class="section section-dark">
@@ -341,6 +435,12 @@
                 canvas.parentNode.replaceChild(mv,canvas);
             }
         });
+        // VanillaTilt init
+        if(typeof VanillaTilt !== 'undefined'){
+            VanillaTilt.init(document.querySelectorAll('.tilt-card'),{
+                max:12,speed:400,glare:true,'max-glare':0.2,scale:1.02
+            });
+        }
         // Scroll reveal
         const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:0.1});
         document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
