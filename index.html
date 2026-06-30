@@ -18,7 +18,7 @@
         @media(max-width:768px){.container{padding:0 24px}}
         .section{padding:120px 0}
         @media(max-width:768px){.section{padding:80px 0}}
-        .section-dark{background:#1C1C1C;color:#F9F9F7}
+        .section-dark{background:#111111;color:#F9F9F7}
         .section-stone{background:#f5f3ef}
         .btn-outline{display:inline-block;padding:14px 36px;border:1px solid;font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.4s;cursor:pointer}
         .btn-outline-light{border-color:#F9F9F7;color:#F9F9F7}
@@ -27,8 +27,6 @@
         .btn-outline-dark:hover{background:#1C1C1C;color:#F9F9F7}
         .btn-primary{display:inline-block;padding:16px 40px;background:#1C5698;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all 0.4s;border:none;cursor:pointer}
         .btn-primary:hover{background:#0f3d6e}
-        .btn-green{background:#2d6a4f}
-        .btn-green:hover{background:#1b4d36}
         .split-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
         @media(max-width:768px){.split-grid{grid-template-columns:1fr;gap:40px}}
         .split-grid.r> :first-child{order:2}
@@ -38,36 +36,21 @@
         @media(max-width:768px){.canvas-3d-wrapper{height:280px}}
         .canvas-3d-wrapper model-viewer,.canvas-3d-wrapper canvas{width:100%;height:100%;display:block}
         .hero-canvas{height:100vh;width:100%;position:relative;background:#1C1C1C}
-        .hero-canvas model-viewer{height:100%;width:100%;--poster-color:transparent}
         .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(28,28,28,0.85) 0%,rgba(28,28,28,0.3) 100%);z-index:1}
         .hero-content{position:absolute;inset:0;z-index:2;display:flex;align-items:center;padding:0 40px}
         @media(max-width:768px){.hero-content{padding:0 24px}}
         .hero-title{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1;letter-spacing:-1px;color:#F9F9F7}
-        .hero-sub{font-size:clamp(0.85rem,1.2vw,1rem);font-weight:200;letter-spacing:3px;text-transform:uppercase;color:rgba(249,249,247,0.6)}
         .section-title{font-size:clamp(2rem,3.5vw,3rem);letter-spacing:-0.5px}
         .label-sm{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400}
-        .text-muted{color:rgba(28,28,28,0.5)}
-        .text-light-muted{color:rgba(249,249,247,0.5)}
-        .bd{height:1px;background:rgba(28,28,28,0.06);margin:0}
-        .bd-light{height:1px;background:rgba(249,249,247,0.1)}
-        .deep-link{font-size:12px;letter-spacing:1px;color:rgba(28,28,28,0.4);text-decoration:none;border-bottom:1px solid rgba(28,28,28,0.15);padding-bottom:2px;transition:all 0.3s;display:inline-flex;align-items:center;gap:6px}
-        .deep-link:hover{color:#1C5698;border-color:#1C5698}
-        .deep-link-light{color:rgba(249,249,247,0.5);border-color:rgba(249,249,247,0.2)}
-        .deep-link-light:hover{color:#F9F9F7;border-color:#F9F9F7}
+        .deep-link{font-size:12px;letter-spacing:1px;color:#1C5698;text-decoration:none;border-bottom:1px solid rgba(28,28,28,0.15);padding-bottom:2px;transition:all 0.3s;display:inline-flex;align-items:center;gap:6px}
+        .deep-link:hover{border-color:#1C5698}
         .whatsapp-float{position:fixed;bottom:28px;right:28px;z-index:999;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 20px rgba(37,211,102,0.3);text-decoration:none;transition:all 0.3s}
-        .whatsapp-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,0.4)}
+        .whatsapp-float:hover{transform:scale(1.08)}
         .form-input{width:100%;padding:14px 16px;border:1px solid rgba(28,28,28,0.12);font-family:'Plus Jakarta Sans',sans-serif;font-weight:300;font-size:14px;background:transparent;color:#1C1C1C;outline:none;transition:border 0.3s}
         .form-input:focus{border-color:#1C5698}
-        .form-input-dark{background:transparent;border-color:rgba(249,249,247,0.2);color:#F9F9F7}
-        .form-input-dark:focus{border-color:rgba(249,249,247,0.5)}
-        .form-input-dark::placeholder{color:rgba(249,249,247,0.3)}
-        .fade-up{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.23,1,0.32,1)}
-        .fade-up.show{opacity:1;transform:translateY(0)}
-        .tilt-card{transform-style:preserve-3d;will-change:transform;transition:transform 0.1s ease;cursor:pointer;position:relative}
-        .tilt-card-inner{transform:translateZ(20px);position:relative;z-index:2}
-        .tilt-card-shine{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,transparent 50%);pointer-events:none;z-index:3;border-radius:inherit;opacity:0;transition:opacity 0.3s}
-        .tilt-card:hover .tilt-card-shine{opacity:1}
-        @keyframes pulse-wa{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.3)}50%{box-shadow:0 4px 30px rgba(37,211,102,0.5)}}
+        .tilt-card{transform-style:preserve-3d;will-change:transform;transition:transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);cursor:pointer;position:relative;background:#1a1a1a;border:1px solid rgba(255,255,255,0.04);border-radius:12px;overflow:hidden;display:block;text-decoration:none;color:inherit}
+        .tilt-card-inner{transform:translateZ(30px);position:relative;z-index:2;padding:20px;}
+        .catalog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
         @media(max-width:768px){.hero-canvas{height:90vh}}
     </style>
 </head>
@@ -81,23 +64,11 @@
         <div class="container"><nav style="display:flex;justify-content:space-between;align-items:center;height:66px;">
             <a href="#" style="text-decoration:none;color:#1C1C1C;"><div style="font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:2px;">PROGETTO OMBRA</div><div style="font-size:8px;letter-spacing:3px;text-transform:uppercase;font-weight:200;opacity:0.4;">Milano — Outdoor Design</div></a>
             <div class="desktop-nav" style="display:flex;gap:32px;align-items:center;">
-                <a href="#bioclimatiche" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Pergole</a>
-                <a href="#vele" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Vele</a>
-                <a href="#innovazione" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Green Tech</a>
-                <a href="#progetti" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;transition:opacity 0.3s;" onmouseover="this.style.opacity='0.5'" onmouseout="this.style.opacity='1'">Progetti</a>
+                <a href="#bioclimatiche" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;">Pergole</a>
+                <a href="#catalogo" class="nav-link" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;font-weight:300;">Catalogo Sistemi</a>
                 <a href="#contatti" class="btn-primary" style="padding:10px 24px;font-size:10px;">Richiedi Sopralluogo</a>
             </div>
-            <button id="menu-toggle" class="menu-btn" style="display:none;background:none;border:none;font-size:22px;cursor:pointer;color:#1C1C1C;"><i class="fas fa-bars"></i></button>
         </nav></div>
-        <div id="mobile-menu" style="display:none;padding:24px;background:#F9F9F7;border-top:1px solid rgba(28,28,28,0.05);">
-            <div style="display:flex;flex-direction:column;gap:16px;text-align:center;">
-                <a href="#bioclimatiche" style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;">Pergole</a>
-                <a href="#vele" style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;">Vele</a>
-                <a href="#innovazione" style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;">Green Tech</a>
-                <a href="#progetti" style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#1C1C1C;">Progetti</a>
-                <a href="#contatti" class="btn-primary" style="display:inline-block;margin:8px auto 0;padding:12px 32px;font-size:11px;">Richiedi Sopralluogo</a>
-            </div>
-        </div>
     </header>
 
     <!-- HERO -->
@@ -114,336 +85,269 @@
                 <p style="font-size:clamp(0.9rem,1.2vw,1.05rem);font-weight:200;line-height:1.8;color:rgba(249,249,247,0.65);margin-bottom:40px;max-width:520px;">Sistemi di copertura, bioclimatiche e schermature solari su misura. Trasformiamo giardini, terrazzi e dehor in oasi di design da vivere 365 giorni all'anno.</p>
                 <div style="display:flex;gap:16px;flex-wrap:wrap;">
                     <a href="#contatti" class="btn-primary">Richiedi un Sopralluogo Gratuito</a>
-                    <a href="https://wa.me/393901234567" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:14px 36px;border:1px solid rgba(249,249,247,0.3);font-family:'Plus Jakarta Sans',sans-serif;font-weight:400;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;color:#F9F9F7;transition:all 0.3s;" onmouseover="this.style.background='rgba(249,249,247,0.1)'" onmouseout="this.style.background='transparent'"><i class="fab fa-whatsapp" style="font-size:18px;"></i> Parla Ora su WhatsApp</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- A. Pergola Bioclimatica Retrattile -->
+    <!-- MAIN PRODUCT PREVIEWS -->
     <section id="bioclimatiche" class="section">
         <div class="container">
             <div class="split-grid">
                 <div>
-                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 01 — Pergola Retrattile</p>
+                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 01 — Innovazione Retrattile</p>
                     <h2 class="section-title" style="margin-bottom:20px;">Lame Impacchettabili <span style="font-style:italic;">Motorizzate</span></h2>
-                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Il massimo della flessibilità per l'outdoor. Grazie alle lame in alluminio orientabili e completamente impacchettabili motorizzate, permette di aprire totalmente la copertura verso il cielo o di chiuderla ermeticamente, offrendo una protezione totale da sole e pioggia con un semplice click.</p>
+                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Il massimo della flessibilità per l'outdoor d'alta gamma. Grazie alle lame in alluminio orientabili e completamente impacchettabili motorizzate, permette di aprire totalmente la copertura verso il cielo o di chiuderla ermeticamente, offrendo protezione da sole e pioggia.</p>
                     <a href="https://www.progettoombra.it/pergola-bioclimatica" target="_blank" class="deep-link" style="margin-bottom:24px;">🔍 Ulteriori informazioni su configurazioni e motorizzazioni →</a>
-                    <div style="margin-top:32px;"><a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a></div>
                 </div>
                 <div>
                     <div class="canvas-3d-wrapper"><canvas id="bioclimatica-retrattile-3d"></canvas></div>
-                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);margin-top:10px;text-align:center;">Modello 3D interattivo</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="bd"></div>
-
-    <!-- B. Pergola Bioclimatica Classica -->
-    <section class="section">
+    <!-- MAIN CATALOG SECTIONS (THE 19 PREMIUM CARDS WITH 3D TILT EFFECT) -->
+    <section id="catalogo" class="section section-dark">
         <div class="container">
-            <div class="split-grid r">
-                <div>
-                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 02 — Pergola Classica</p>
-                    <h2 class="section-title" style="margin-bottom:20px;">Lame Orientabili <span style="font-style:italic;">Bris</span></h2>
-                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Tecnologia e microclima perfetto. Le lamelle in alluminio regolano millimetricamente l'intensità della luce solare e favoriscono il ricircolo naturale dell'aria. Una struttura solida, minimale e dal design contemporaneo per vivere il dehor in totale comfort.</p>
-                    <a href="https://www.progettoombra.it/pergola-bioclimatica-classica" target="_blank" class="deep-link" style="margin-bottom:24px;">🔍 Vedi dettagli tecnici sul sito ufficiale →</a>
-                    <div style="margin-top:32px;"><a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a></div>
-                </div>
-                <div>
-                    <div class="canvas-3d-wrapper"><canvas id="bioclimatica-classic-3d"></canvas></div>
-                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);margin-top:10px;text-align:center;">Modello 3D interattivo</p>
-                </div>
+            <div style="text-align:center; margin-bottom:60px;">
+                <p class="label-sm" style="color:rgba(249,249,247,0.4);margin-bottom:10px;">Catalogo Architettura Outdoor</p>
+                <h2 class="section-title" style="color:#F9F9F7;margin-bottom:12px;">Esplora i Nostri <span style="font-style:italic;">Sistemi di Design</span></h2>
+                <p style="font-weight:200;font-size:0.95rem;color:rgba(249,249,247,0.5);max-width:600px;margin:0 auto;">Soluzioni sartoriali per l'eccellenza architettonica a Milano. Muovi il cursore sopra i riquadri per interagire con l'anteprima dinamica in profondità.</p>
             </div>
-        </div>
-    </section>
 
-    <div class="bd"></div>
-
-    <!-- C. Tenda da Sole con Cassonetto -->
-    <section class="section">
-        <div class="container">
-            <div class="split-grid">
-                <div>
-                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 03 — Tenda Cassonetto</p>
-                    <h2 class="section-title" style="margin-bottom:20px;">Minimo Ingombro <span style="font-style:italic;">a Scomparsa</span></h2>
-                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Tecnologia e pulizia visiva si fondono in una struttura a scomparsa totale. Quando chiusa, il cassonetto micro protegge integralmente il tessuto dagli agenti atmosferici, integrandosi perfettamente nella facciata senza comprometterne l'estetica.</p>
-                    <a href="https://www.progettoombra.it/tende-da-sole" target="_blank" class="deep-link" style="margin-bottom:24px;">🔍 Sfoglia la gamma tessuti e modelli →</a>
-                    <div style="margin-top:32px;"><a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a></div>
-                </div>
-                <div>
-                    <div class="canvas-3d-wrapper"><canvas id="tenda-cassonetto-3d"></canvas></div>
-                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);margin-top:10px;text-align:center;">Modello 3D interattivo</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="bd"></div>
-
-    <!-- D. Vele e Ombrelloni Nautici -->
-    <section id="vele" class="section">
-        <div class="container">
-            <div class="split-grid r">
-                <div>
-                    <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Sistema 04 — Vele</p>
-                    <h2 class="section-title" style="margin-bottom:20px;">Pergola Vela &<br>Ombrelloni <span style="font-style:italic;">Nautici</span></h2>
-                    <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(28,28,28,0.65);margin-bottom:16px;">Sistemi di ombreggiamento autoportanti o ancorati che applicano le tecnologie e i materiali del mondo nautico all'architettura civile. Linee tese, movimentazioni fluide e massima resistenza per una gestione d'élite dell'ombra e della protezione dall'acqua.</p>
-                    <a href="https://www.progettoombra.it/vele-da-sole" target="_blank" class="deep-link" style="margin-bottom:24px;">🔍 Maggiori informazioni su Vele e Ombrelloni →</a>
-                    <div style="margin-top:32px;"><a href="#contatti" class="btn-outline btn-outline-dark">Richiedi Informazioni</a></div>
-                </div>
-                <div>
-                    <div class="canvas-3d-wrapper"><canvas id="vele-ombrelloni-3d"></canvas></div>
-                    <p style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:rgba(28,28,28,0.25);margin-top:10px;text-align:center;">Modello 3D interattivo</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="bd"></div>
-
-    <!-- CATALOGO 3D TILT -->
-    <section class="section section-dark" style="padding:100px 0 120px;">
-        <div class="container" style="text-align:center;">
-            <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:10px;">Catalogo Completo</p>
-            <h2 class="section-title" style="color:#F9F9F7;margin-bottom:12px;">Esplora i Nostri <span style="font-style:italic;">Sistemi</span></h2>
-            <p style="font-weight:200;font-size:0.9rem;color:rgba(249,249,247,0.4);max-width:500px;margin:0 auto 50px;">Muovi il mouse sopra ogni card per esplorare i dettagli in 3D</p>
-            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;" class="catalog-grid">
-                <a href="https://www.progettoombra.it/vetrate" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop" alt="Vetrate e Infissi" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Vetrate e Infissi</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/pensiline" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&h=400&fit=crop" alt="Pensiline" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Pensiline</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/giardini-inverno" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=600&h=400&fit=crop" alt="Giardini d'Inverno" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Giardini d'Inverno</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/ombrelloni" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?w=600&h=400&fit=crop" alt="Ombrelloni Premium" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Ombrelloni Premium</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/vele-da-sole" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=600&h=400&fit=crop" alt="Vele da Sole" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Vele da Sole</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/clean-outdoor" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop" alt="Clean Outdoor" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Servizio</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Clean Outdoor</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/libro" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#2a2a2a;"><div style="font-size:60px;opacity:0.3;">📘</div></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Lead Magnet</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Il Libro — Diana Iannelli</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/fotovoltaico" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop" alt="Tessuto Fotovoltaico" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Green Tech</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Tessuto Fotovoltaico</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/pergole-strutturali" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" alt="Pergole Strutturali" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Pergole Strutturali</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/tende-tecniche" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=600&h=400&fit=crop" alt="Tende Tecniche" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Tende Tecniche</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/tende-cassonetto" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607687644-c94bf556f42e?w=600&h=400&fit=crop" alt="Tenda Cassonetto" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Tenda Cassonetto</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/pergola-bioclimatica" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" alt="Pergola Bioclimatica Retrattile" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Bioclimatica Retrattile</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/pergole-tradizionali" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&h=400&fit=crop" alt="Pergole Tradizionali" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Pergole Tradizionali</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/pergola-classica" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop" alt="Pergola Bioclimatica Classica" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Sistema</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Bioclimatica Classica</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/showroom" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607687644-c94bf556f42e?w=600&h=400&fit=crop" alt="Showroom" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Visita</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Showroom e Uffici</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/sicurezza" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop" alt="Sicurezza" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Certificazione</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Ingegnerizzazione e Sicurezza</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/diana-iannelli" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#2a2a2a;"><div style="font-size:50px;opacity:0.3;">👩‍💼</div></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">General Contractor</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Diana Iannelli</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/contract" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="Outdoor Contractor" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Contract</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Outdoor Contractor</div></div>
-                </a>
-                <a href="https://www.progettoombra.it/design-concept" target="_blank" class="tilt-card" style="display:block;text-decoration:none;color:inherit;border-radius:12px;overflow:hidden;background:#232323;border:1px solid rgba(249,249,247,0.06);" data-tilt data-tilt-glare data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.02">
-                    <div style="height:180px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop" alt="Outdoor Design" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-                    <div class="tilt-card-inner" style="padding:18px 20px 20px;"><div class="tilt-card-shine"></div><div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:400;color:rgba(249,249,247,0.35);margin-bottom:2px;">Design</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#F9F9F7;">Outdoor Design Concept</div></div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <div class="bd-light"></div>
-
-    <!-- INNOVAZIONE: Tessuto Fotovoltaico -->
-    <section id="innovazione" class="section section-dark">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:60px;">
-                <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:12px;">Green Technology</p>
-                <h2 class="section-title" style="color:#F9F9F7;margin-bottom:20px;">Tessuto Fotovoltaico <span style="font-style:italic;">Attivo</span></h2>
-                <p style="font-weight:200;font-size:0.95rem;line-height:2;color:rgba(249,249,247,0.55);max-width:620px;margin:0 auto 24px;">L'evoluzione sostenibile dell'outdoor design. Trasformiamo le coperture tessili di tende e pergole in superfici attive capaci di generare energia pulita per la tua abitazione, unendo l'esigenza di ombreggiamento all'efficienza energetica.</p>
-                <a href="https://www.progettoombra.it/fotovoltaico-outdoor" target="_blank" class="deep-link deep-link-light">🔍 Leggi le specifiche del brevetto su progettoombra.it →</a>
-            </div>
-            <div class="canvas-3d-wrapper" style="height:380px;background:#2a2a2a;max-width:800px;margin:0 auto;"><canvas id="tessuto-fotovoltaico-3d"></canvas></div>
-            <div style="text-align:center;margin-top:32px;"><a href="#contatti" class="btn-primary btn-green" style="padding:16px 40px;">Richiedi Analisi Energetica Outdoor</a></div>
-        </div>
-    </section>
-
-    <div class="bd-light"></div>
-
-    <!-- GRANDI PROGETTI -->
-    <section id="progetti" class="section section-dark">
-        <div class="container">
-            <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:12px;text-align:center;">Grandi Progetti</p>
-            <h2 class="section-title" style="color:#F9F9F7;text-align:center;margin-bottom:60px;">Estensione degli Spazi &<br><span style="font-style:italic;">Architettura</span></h2>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;" class="grid-progetti">
-                <div>
-                    <div class="canvas-3d-wrapper" style="height:260px;background:#2a2a2a;"><canvas id="giardini-inverno-3d"></canvas></div>
-                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#F9F9F7;margin:20px 0 12px;">Giardini d'Inverno e Serre Bioclimatiche</h3>
-                    <p style="font-weight:200;font-size:0.85rem;line-height:1.8;color:rgba(249,249,247,0.5);">Strutture d'élite progettate per ampliare la superficie abitativa. Una stanza di luce ad alto isolamento termico per un'oasi di relax in qualsiasi stagione.</p>
-                    <a href="https://www.progettoombra.it/giardini-inverno" target="_blank" class="deep-link deep-link-light" style="margin-top:12px;">Scopri di più →</a>
-                </div>
-                <div>
-                    <div class="canvas-3d-wrapper" style="height:260px;background:#2a2a2a;"><canvas id="vetrate-panorami-3d"></canvas></div>
-                    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#F9F9F7;margin:20px 0 12px;">Vetrate Panoramiche e Serramenti</h3>
-                    <p style="font-weight:200;font-size:0.85rem;line-height:1.8;color:rgba(249,249,247,0.5);">Sistemi di chiusura minimali con profili micro e vetrate panoramiche a scomparsa totale. Massima luminosità e isolamento termico e acustico.</p>
-                    <a href="https://www.progettoombra.it/vetrate" target="_blank" class="deep-link deep-link-light" style="margin-top:12px;">Scopri di più →</a>
-                </div>
-            </div>
-            <div style="text-align:center;margin-top:60px;">
-                <a href="https://www.progettoombra.it/progetti" target="_blank" class="deep-link deep-link-light" style="font-size:13px;">🔍 Esplora i dettagli di progettazione e i materiali sul sito ufficiale →</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="bd-light"></div>
-
-    <!-- LEAD MAGNET: Il Libro -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="split-grid">
-                <div>
-                    <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:12px;">Lead Magnet</p>
-                    <h2 class="section-title" style="color:#F9F9F7;margin-bottom:20px;">Il Libro delle Bioclimatiche<br><span style="font-style:italic;font-size:1.2rem;color:rgba(249,249,247,0.5);">Diana Iannelli</span></h2>
-                    <p style="font-weight:200;font-size:0.9rem;line-height:1.9;color:rgba(249,249,247,0.55);margin-bottom:16px;">La guida definitiva per fare la scelta corretta. Scritto da Diana Iannelli, questo volume racchiude segreti, normative e soluzioni tecniche per progettare la pergola bioclimatica perfetta a Milano, evitando gli errori più comuni.</p>
-                </div>
-                <div>
-                    <form onsubmit="event.preventDefault();alert('Richiesta inviata! Ti contatteremo entro 24 ore.');" style="display:flex;flex-direction:column;gap:14px;">
-                        <input type="text" placeholder="Nome e Cognome" class="form-input form-input-dark" required>
-                        <input type="email" placeholder="Email" class="form-input form-input-dark" required>
-                        <input type="tel" placeholder="Telefono" class="form-input form-input-dark" required>
-                        <input type="hidden" name="lead_source" value="libro_bioclimatiche">
-                        <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Scarica un Estratto Gratuito</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="bd-light"></div>
-
-    <!-- POST-VENDITA: Clean Outdoor -->
-    <section class="section section-dark">
-        <div class="container" style="text-align:center;">
-            <p class="label-sm" style="color:rgba(249,249,247,0.3);margin-bottom:12px;">Post-Vendita</p>
-            <h2 class="section-title" style="color:#F9F9F7;margin-bottom:20px;">Servizio <span style="font-style:italic;">Clean Outdoor</span></h2>
-            <p style="font-weight:200;font-size:0.95rem;line-height:1.9;color:rgba(249,249,247,0.55);max-width:620px;margin:0 auto 32px;">Ci prendiamo cura del tuo investimento nel tempo. Lavaggio professionale dei tessuti, igienizzazione delle strutture in alluminio, verifica dei sistemi di motorizzazione e ripristino delle guarnizioni per mantenere l'efficienza inalterata negli anni.</p>
-            <a href="#contatti" class="btn-outline btn-outline-light">Prenota un Intervento Clean Outdoor</a>
-        </div>
-    </section>
-
-    <!-- CONTATTI & FORM -->
-    <section id="contatti" class="section">
-        <div class="container">
-            <div style="text-align:center;margin-bottom:60px;">
-                <p class="label-sm" style="color:rgba(28,28,28,0.3);margin-bottom:12px;">Contatti</p>
-                <h2 class="section-title" style="margin-bottom:16px;">Richiedi un <span style="font-style:italic;">Sopralluogo</span></h2>
-                <p style="font-weight:200;color:rgba(28,28,28,0.5);max-width:500px;margin:0 auto;">Vuoi toccare con mano la qualità dei nostri prodotti? Ti aspettiamo nel nostro showroom a Milano.</p>
-            </div>
-            <div class="split-grid" style="gap:60px;">
-                <div>
-                    <div style="display:flex;flex-direction:column;gap:20px;">
-                        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(28,28,28,0.06);"><div style="width:40px;height:40px;border-radius:50%;background:rgba(28,28,28,0.03);display:flex;align-items:center;justify-content:center;"><i class="fas fa-map-pin" style="color:#1C5698;font-size:16px;"></i></div><div><p style="font-weight:400;font-size:14px;">Sede & Showroom</p><p style="font-weight:200;font-size:13px;color:rgba(28,28,28,0.5);">Milano (MI)</p></div></div>
-                        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(28,28,28,0.06);"><div style="width:40px;height:40px;border-radius:50%;background:rgba(28,28,28,0.03);display:flex;align-items:center;justify-content:center;"><i class="fas fa-globe" style="color:#1C5698;font-size:16px;"></i></div><div><p style="font-weight:400;font-size:14px;">Sito Ufficiale</p><a href="https://www.progettoombra.it" target="_blank" style="font-weight:200;font-size:13px;color:#1C5698;text-decoration:none;">www.progettoombra.it</a></div></div>
-                        <div style="display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid rgba(28,28,28,0.06);"><div style="width:40px;height:40px;border-radius:50%;background:rgba(28,28,28,0.03);display:flex;align-items:center;justify-content:center;"><i class="fas fa-phone" style="color:#1C5698;font-size:16px;"></i></div><div><p style="font-weight:400;font-size:14px;">Telefono</p><a href="tel:+39021234567" style="font-weight:200;font-size:13px;color:#1C5698;text-decoration:none;">02 12 345 67</a></div></div>
+            <div class="catalog-grid">
+                <!-- 1. Vetrate e Infissi -->
+                <a href="https://www.progettoombra.it/vetrate" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=400&fit=crop" alt="Vetrate e Infissi" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Sistemi Scorrevoli</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Vetrate e Infissi</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Vetrate, infissi, finestre e serramenti minimali per verande.</p>
                     </div>
-                </div>
-                <div>
-                    <form onsubmit="event.preventDefault();alert('Richiesta inviata! Ti contatteremo entro 24 ore per fissare il sopralluogo.');" style="display:flex;flex-direction:column;gap:14px;">
-                        <input type="text" placeholder="Nome e Cognome" class="form-input" required>
-                        <input type="email" placeholder="Email" class="form-input" required>
-                        <input type="tel" placeholder="Telefono" class="form-input" required>
-                        <textarea placeholder="Descrivi brevemente il tuo progetto..." class="form-input" rows="3" style="resize:none;"></textarea>
-                        <input type="hidden" name="lead_source" value="sopralluogo_diretto">
-                        <button type="submit" class="btn-primary" style="width:100%;text-align:center;">Richiedi Sopralluogo Gratuito</button>
-                    </form>
-                </div>
+                </a>
+
+                <!-- 2. Pensiline -->
+                <a href="https://www.progettoombra.it/pensiline" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&h=400&fit=crop" alt="Pensiline" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Ingegneria Sospesa</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Pensiline</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Pensiline strutturali in policarbonato compatto e vetro stratificato.</p>
+                    </div>
+                </a>
+
+                <!-- 3. Giardini d'Inverno -->
+                <a href="https://www.progettoombra.it/giardini-inverno" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=600&h=400&fit=crop" alt="Giardini d'Inverno" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Spazi di Lusso</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Giardini d'Inverno</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Giardini d'inverno, pergole e pergolati, serre bioclimatiche e verande.</p>
+                    </div>
+                </a>
+
+                <!-- 4. Ombrelloni -->
+                <a href="https://www.progettoombra.it/ombrelloni" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop" alt="Ombrelloni" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Coperture Autoportanti</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Ombrelloni</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Ombrelloni per esterno premium a braccio laterale o centrale.</p>
+                    </div>
+                </a>
+
+                <!-- 5. Vele da Sole -->
+                <a href="https://www.progettoombra.it/vele-da-sole" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?w=600&h=400&fit=crop" alt="Vele da Sole" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Tecnologia Nautica</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Vele da Sole</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Vele da sole Milano con sistemi di tensionamento e avvolgimento automatico.</p>
+                    </div>
+                </a>
+
+                <!-- 6. Clean Outdoor -->
+                <a href="https://www.progettoombra.it/clean-outdoor" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop" alt="Clean Outdoor" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Manutenzione</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Clean Outdoor</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Lavaggio profondo pergole bioclimatiche e manutenzione ordinaria verande.</p>
+                    </div>
+                </a>
+
+                <!-- 7. Il Libro -->
+                <a href="https://www.progettoombra.it/libro" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;background:#1E2530;display:flex;align-items:center;justify-content:center;color:rgba(249,249,247,0.8);font-size:3rem;font-family:'Cormorant Garamond',serif;">DI</div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#1C5698;margin-bottom:4px;font-weight:500;">Pubblicazione Esclusiva</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Il Libro</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Scopri le straordinarie pergole bioclimatiche firmate da Diana Iannelli.</p>
+                    </div>
+                </a>
+
+                <!-- 8. Tessuto Fotovoltaico -->
+                <a href="https://www.progettoombra.it/fotovoltaico" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop" alt="Tessuto Fotovoltaico" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#2d6a4f;margin-bottom:4px;font-weight:500;">Green Innovation</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Tessuto Fotovoltaico</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Tessuti tecnologici integrati con micro-pannelli per generare energia pulita.</p>
+                    </div>
+                </a>
+
+                <!-- 9. Pergole Strutturali -->
+                <a href="https://www.progettoombra.it/pergole-strutturali" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" alt="Pergole Strutturali" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Grandi Dimensioni</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Pergole Strutturali</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Pergole portanti in alluminio estruso, acciaio strutturale e legno lamellare.</p>
+                    </div>
+                </a>
+
+                <!-- 10. Tende Tecniche -->
+                <a href="https://www.progettoombra.it/tende-tecniche" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=600&h=400&fit=crop" alt="Tende Tecniche" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Controllo Solare</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Tende Tecniche</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Sistemi oscuranti e filtranti a rullo millimetrici per interni ed esterni.</p>
+                    </div>
+                </a>
+
+                <!-- 11. Tenda da Sole con Cassonetto -->
+                <a href="https://www.progettoombra.it/tende-cassonetto" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607687644-c94bf556f42e?w=600&h=400&fit=crop" alt="Tenda da Sole con Cassonetto" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Minimal Design</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Tenda con Cassonetto</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Modelli con cassonetto a scomparsa totale per la massima protezione.</p>
+                    </div>
+                </a>
+
+                <!-- 12. Pergola Bioclimatica Retrattile -->
+                <a href="https://www.progettoombra.it/pergola-bioclimatica" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" alt="Pergola Bioclimatica Retrattile" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Ingegneria Avanzata</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Bioclimatica Retrattile</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Sistemi bioclimatici con pale in alluminio orientabili e retraibili.</p>
+                    </div>
+                </a>
+
+                <!-- 13. Pergole e Tende Tradizionali -->
+                <a href="https://www.progettoombra.it/pergole-tradizionali" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=600&h=400&fit=crop" alt="Pergole e Tende Tradizionali" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Stile Classico</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Pergole Tradizionali</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Sistemi di ombreggiamento classici dal fascino intramontabile.</p>
+                    </div>
+                </a>
+
+                <!-- 14. Pergola Bioclimatica Classica (Modello Bris) -->
+                <a href="https://www.progettoombra.it/pergola-bioclimatica-classica" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&h=400&fit=crop" alt="Modello Bris" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Brevetti Esclusivi</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Bioclimatica Classica</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Lame fisse e orientabili a microclima controllato Modello Bris.</p>
+                    </div>
+                </a>
+
+                <!-- 15. Showroom e Uffici -->
+                <a href="https://www.progettoombra.it/showroom" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Showroom" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Spazio Espositivo</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Showroom e Uffici</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Vieni a toccare con mano la qualità nei nostri spazi a Milano.</p>
+                    </div>
+                </a>
+
+                <!-- 16. Ingegnerizzazione e Sicurezza -->
+                <a href="https://www.progettoombra.it/sicurezza" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop" alt="Ingegneria" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Standard Certificati</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Sicurezza e Calcoli</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Calcoli strutturali antisismici e sicurezza certificata nel montaggio.</p>
+                    </div>
+                </a>
+
+                <!-- 17. Diana Iannelli -->
+                <a href="https://www.progettoombra.it/diana-iannelli" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop" alt="Diana Iannelli" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#1C5698;margin-bottom:4px;font-weight:500;">Direzione Progetti</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Diana Iannelli</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">General Contractor per lo sviluppo integrato di coperture complesse.</p>
+                    </div>
+                </a>
+
+                <!-- 18. Outdoor Contractor -->
+                <a href="https://www.progettoombra.it/outdoor-contractor" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop" alt="Horeca" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Business & HoReCa</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Outdoor Contractor</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Soluzioni avanzate per dehors di Bar, Ristoranti ed Hotel di lusso.</p>
+                    </div>
+                </a>
+
+                <!-- 19. Outdoor Design Concept -->
+                <a href="https://www.progettoombra.it/design-concept" target="_blank" class="tilt-card" data-tilt data-tilt-max="15" data-tilt-speed="500" data-tilt-glare data-tilt-max-glare="0.2">
+                    <div style="height:200px;overflow:hidden;"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop" alt="Residenziale Premium" style="width:100%;height:100%;object-fit:cover;"></div>
+                    <div class="tilt-card-inner">
+                        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(249,249,247,0.4);margin-bottom:4px;">Architettura Residenziale</div>
+                        <h3 style="font-size:1.4rem;color:#F9F9F7;">Outdoor Concept</h3>
+                        <p style="font-size:12px;color:rgba(249,249,247,0.5);margin-top:6px;font-weight:200;">Progettazione sartoriale per Ville, Attici e Terrazzi privati.</p>
+                    </div>
+                </a>
             </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section id="contatti" class="section">
+        <div class="container" style="max-width:600px;">
+            <div style="text-align:center;margin-bottom:40px;">
+                <p class="label-sm" style="color:rgba(28,28,28,0.4);margin-bottom:8px;">Consulenza Privata</p>
+                <h2 class="section-title">Richiedi un Sopralluogo</h2>
+            </div>
+            <form style="display:flex;flex-direction:column;gap:20px;">
+                <input type="text" placeholder="Nome Completo" class="form-input" required>
+                <input type="email" placeholder="Email" class="form-input" required>
+                <input type="tel" placeholder="Telefono" class="form-input" required>
+                <textarea placeholder="Parlaci del tuo progetto a Milano..." class="form-input" style="height:120px;resize:none;" required></textarea>
+                <button type="submit" class="btn-primary" style="width:100%;">Invia Richiesta</button>
+            </form>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer style="padding:60px 0 32px;border-top:1px solid rgba(28,28,28,0.06);">
+    <footer style="background:#111;padding:40px 0;border-top:1px solid rgba(255,255,255,0.05);color:rgba(249,249,247,0.4);font-size:12px;text-align:center;">
         <div class="container">
-            <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:48px;" class="footer-grid">
-                <div><div style="font-family:'Cormorant Garamond',serif;font-size:16px;letter-spacing:2px;margin-bottom:4px;">PROGETTO OMBRA</div><div style="font-size:8px;letter-spacing:3px;text-transform:uppercase;font-weight:200;color:rgba(28,28,28,0.3);margin-bottom:20px;">Milano — Outdoor Design</div><p style="font-weight:200;font-size:0.8rem;line-height:1.9;color:rgba(28,28,28,0.4);">Sistemi di copertura, pergole bioclimatiche, vele e schermature solari. Design e innovazione per esterni a Milano dal 2010.</p></div>
-                <div><h4 style="font-weight:400;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Sistemi</h4><ul style="list-style:none;font-weight:200;font-size:0.8rem;line-height:2;color:rgba(28,28,28,0.4);"><li>Pergole Bioclimatiche</li><li>Vele da Sole</li><li>Tende a Proiezione</li><li>Pareti Vetrate</li></ul></div>
-                <div><h4 style="font-weight:400;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px;">Contatti</h4><ul style="list-style:none;font-weight:200;font-size:0.8rem;line-height:2;color:rgba(28,28,28,0.4);"><li><a href="tel:+39021234567" style="color:inherit;text-decoration:none;">02 12 345 67</a></li><li>info@progettoombra.it</li><li>Milano — Showroom</li></ul></div>
-            </div>
-            <div class="bd" style="margin-bottom:20px;"></div>
-            <div style="display:flex;justify-content:space-between;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(28,28,28,0.2);flex-wrap:wrap;gap:12px;"><span>&copy; 2026 Progetto Ombra Milano</span><span>Design & Sviluppo Indipendente</span><a href="https://www.progettoombra.it" target="_blank" style="color:inherit;text-decoration:none;">www.progettoombra.it</a></div>
+            <p>© 2026 Progetto Ombra Milano. Tutti i diritti riservati. Realizzato con cura sartoriale.</p>
         </div>
     </footer>
 
+    <!-- INITIALIZE VANILLA TILT -->
     <script>
-        // Mobile menu
-        const mt=document.getElementById('menu-toggle'),mm=document.getElementById('mobile-menu');
-        if(mt) mt.addEventListener('click',()=>{mm.style.display=mm.style.display==='none'||mm.style.display===''?'block':'none'});
-        document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const h=this.getAttribute('href');if(h&&h.startsWith('#')){e.preventDefault();const t=document.querySelector(h);if(t)t.scrollIntoView({behavior:'smooth'})}if(mm)mm.style.display='none'})});
-        function checkWidth(){const dn=document.querySelector('.desktop-nav'),mb=document.querySelector('.menu-btn');if(window.innerWidth<=768){dn.style.display='none';mb.style.display='block'}else{dn.style.display='flex';mb.style.display='none';if(mm)mm.style.display='none'}}
-        checkWidth();window.addEventListener('resize',checkWidth);
-        // 3D Canvas init with model-viewer fallback
-        document.querySelectorAll('.canvas-3d-wrapper').forEach((wrapper,idx)=>{
-            const canvas=wrapper.querySelector('canvas');
-            if(canvas){
-                const urls=['https://modelviewer.dev/shared-assets/models/Chair.glb','https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb','https://modelviewer.dev/shared-assets/models/Chair.glb','https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb','https://modelviewer.dev/shared-assets/models/Chair.glb','https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb','https://modelviewer.dev/shared-assets/models/Chair.glb','https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb'];
-                const mv=document.createElement('model-viewer');
-                mv.setAttribute('src',urls[idx % urls.length]);
-                mv.setAttribute('camera-controls','');
-                mv.setAttribute('auto-rotate','');
-                mv.setAttribute('rotation-per-second','25deg');
-                mv.setAttribute('touch-action','pan-y');
-                mv.style.width='100%';mv.style.height='100%';mv.style.display='block';
-                canvas.parentNode.replaceChild(mv,canvas);
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof VanillaTilt !== "undefined") {
+                VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+                    max: 12,
+                    speed: 400,
+                    glare: true,
+                    "max-glare": 0.2,
+                    perspective: 1000,
+                    scale: 1.02
+                });
             }
         });
-        // VanillaTilt init
-        if(typeof VanillaTilt !== 'undefined'){
-            VanillaTilt.init(document.querySelectorAll('.tilt-card'),{
-                max:12,speed:400,glare:true,'max-glare':0.2,scale:1.02
-            });
-        }
-        // Scroll reveal
-        const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:0.1});
-        document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
     </script>
 </body>
 </html>
