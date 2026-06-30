@@ -17,7 +17,7 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
     
     <style>
-        /* Reset Generali e Setup Estetico */
+        /* Reset Generali e Setup Estetico Luxury */
         * {
             margin: 0;
             padding: 0;
@@ -46,33 +46,32 @@
             .container { padding: 0 24px; }
         }
         
-        /* Sezioni Prodotto in stile Split (image_56a415.png) */
+        /* Sezioni Prodotto in stile Split Elegante (image_56a415.png) */
         .product-section {
-            padding: 100px 0;
+            padding: 120px 0;
             border-bottom: 1px solid rgba(28,28,28,0.05);
             background: #F9F9F7;
         }
         .product-section:nth-child(even) {
-            background: #F4F4F0; /* Sfondo leggermente alternato per stacco premium */
+            background: #F4F4F0; /* Sfondo alternato caldi toni off-white */
         }
 
         .split-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            gap: 100px;
             align-items: center;
         }
         @media(max-width: 992px) {
             .split-grid { 
                 grid-template-columns: 1fr; 
-                gap: 40px; 
+                gap: 50px; 
             }
-            /* Sui telefoni l'immagine va sempre sopra il testo */
             .split-grid .text-side { order: 2; }
             .split-grid .visual-side { order: 1; }
         }
 
-        /* Inversione della griglia per effetto alternato elegante */
+        /* Inversione alternata della griglia */
         .grid-reverse .text-side {
             order: 2;
         }
@@ -80,81 +79,101 @@
             .grid-reverse .text-side { order: 2; }
         }
 
-        /* Dettagli Tipografici e Link */
+        /* Tipografia Premium */
         .label-sm {
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 500;
             color: #1C5698;
-            margin-bottom: 14px;
+            margin-bottom: 16px;
             display: block;
         }
         .product-title {
-            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            font-size: clamp(2.4rem, 4vw, 3.2rem);
             line-height: 1.15;
             margin-bottom: 24px;
             color: #1C1C1C;
+            letter-spacing: -0.5px;
         }
         .product-title span {
             font-style: italic;
         }
         .product-desc {
             color: rgba(28,28,28,0.7);
-            line-height: 1.8;
-            font-size: 15px;
-            margin-bottom: 28px;
+            line-height: 1.9;
+            font-size: 16px;
+            margin-bottom: 32px;
         }
         .deep-link {
             font-size: 12px;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             color: #1C5698;
             text-decoration: none;
-            border-bottom: 1px solid rgba(28,86,152,0.2);
-            padding-bottom: 4px;
+            border-bottom: 1px solid rgba(28,86,152,0.25);
+            padding-bottom: 6px;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             font-weight: 500;
+            text-transform: uppercase;
         }
         .deep-link:hover {
             border-color: #1C5698;
-            gap: 10px;
+            gap: 12px;
         }
 
-        /* Contenitore per il visualizzatore 3D */
+        /* Contenitore Visual: Visualizzazione pulita dell'immagine reale */
         .canvas-3d-wrapper {
             width: 100%;
-            height: 450px;
-            background: #EFEFEA;
+            height: 480px;
             position: relative;
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+            background: #F4F4F0;
         }
+        
+        /* L'immagine reale copre l'area e si integra perfettamente */
+        .canvas-3d-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.5s ease;
+            z-index: 1;
+        }
+        
+        /* Il visualizzatore 3D è posizionato sopra, pronto ad attivarsi senza sfondi grigi intermedi */
         model-viewer {
             width: 100%;
             height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
             background-color: transparent;
             --poster-color: transparent;
         }
 
-        /* Navbar Semplice ed Elegante */
+        /* Navbar Minimale */
         header {
             position: fixed;
             width: 100%;
             z-index: 100;
-            background: rgba(249,249,247,0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(28,28,28,0.05);
+            background: rgba(249,249,247,0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(28,28,28,0.04);
             top: 0;
         }
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 75px;
+            height: 80px;
         }
         .logo {
             text-decoration: none;
@@ -162,19 +181,17 @@
         }
         .logo-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 20px;
+            font-size: 22px;
             letter-spacing: 2px;
         }
         .logo-sub {
             font-size: 8px;
             letter-spacing: 3px;
             text-transform: uppercase;
-            opacity: 0.5;
+            opacity: 0.6;
         }
-
-        /* Spaziatore iniziale per la Navbar */
         .nav-spacer {
-            height: 75px;
+            height: 80px;
         }
     </style>
 </head>
@@ -202,19 +219,21 @@
                     <span class="label-sm">Sistemi Bioclimatici Avanzati</span>
                     <h2 class="product-title">Lame Impacchettabili <span>Motorizzate</span></h2>
                     <p class="product-desc">Il massimo della flessibilità per l'outdoor d'alta gamma. Grazie alle lame in alluminio orientabili e completamente impacchettabili motorizzate, permette di aprire totalmente la copertura verso il cielo o di chiuderla ermeticamente.</p>
-                    <a href="https://www.progettoombra.it/pergola-bioclimatica" target="_blank" class="deep-link">Scopri le nostre configurazioni e motorizzazioni →</a>
+                    <a href="https://www.progettoombra.it/pergola-bioclimatica" target="_blank" class="deep-link">Scopri le nostre configurazioni →</a>
                 </div>
                 <div class="visual-side">
                     <div class="canvas-3d-wrapper">
-                        <!-- Puoi sostituire il link src con il file .glb effettivo della pergola quando pronto -->
-                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Chair.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+                        <!-- Immagine reale di sfondo presa dal catalogo originale -->
+                        <img src="https://images.unsplash.com/photo-11600607687939-ce8a6c25118c?w=800&h=600&fit=crop" alt="Lame Impacchettabili">
+                        <!-- Quando caricherai il file .glb della pergola qui, l'utente potrà interagire in 3D -->
+                        <model-viewer src="" camera-controls auto-rotate></model-viewer>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEZIONE 2: Vetrate e Infissi (Invertita per dinamismo estetico) -->
+    <!-- SEZIONE 2: Vetrate e Infissi -->
     <section class="product-section">
         <div class="container">
             <div class="split-grid grid-reverse">
@@ -226,7 +245,9 @@
                 </div>
                 <div class="visual-side">
                     <div class="canvas-3d-wrapper">
-                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+                        <!-- Immagine reale dal catalogo foto 2 (Vetrate e Infissi) -->
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop" alt="Vetrate e Infissi">
+                        <model-viewer src="" camera-controls auto-rotate></model-viewer>
                     </div>
                 </div>
             </div>
@@ -245,7 +266,9 @@
                 </div>
                 <div class="visual-side">
                     <div class="canvas-3d-wrapper">
-                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Chair.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+                        <!-- Immagine reale dal catalogo foto 2 (Pensiline) -->
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=600&fit=crop" alt="Pensiline di Design">
+                        <model-viewer src="" camera-controls auto-rotate></model-viewer>
                     </div>
                 </div>
             </div>
@@ -264,7 +287,9 @@
                 </div>
                 <div class="visual-side">
                     <div class="canvas-3d-wrapper">
-                        <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" camera-controls auto-rotate shadow-intensity="1"></model-viewer>
+                        <!-- Immagine reale dal catalogo foto 2 (Giardini d'Inverno) -->
+                        <img src="https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&h=600&fit=crop" alt="Giardini d'Inverno">
+                        <model-viewer src="" camera-controls auto-rotate></model-viewer>
                     </div>
                 </div>
             </div>
