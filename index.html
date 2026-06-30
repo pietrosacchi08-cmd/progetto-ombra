@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diana Iannelli — Portfolio</title>
+    <title>Progetto Ombra Milano — Portfolio Diana Iannelli</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +64,7 @@
 
         .nav-logo {
             font-family: var(--font-serif);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 400;
@@ -72,7 +72,10 @@
 
         .nav-logo span {
             font-weight: 300;
-            opacity: 0.7;
+            opacity: 0.6;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
         }
 
         .contact-btn {
@@ -106,19 +109,29 @@
             background: radial-gradient(circle at center, #161616 0%, #0B0B0B 100%);
         }
 
+        .hero .brand-top {
+            font-family: var(--font-sans);
+            font-size: 12px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
         .hero h1 {
             font-family: var(--font-serif);
-            font-size: clamp(3.5rem, 8vw, 7rem);
+            font-size: clamp(3rem, 7vw, 6.5rem);
             font-weight: 300;
             line-height: 1.1;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: clamp(14px, 2vw, 18px);
+            font-size: clamp(14px, 2vw, 17px);
             font-weight: 300;
-            max-width: 600px;
+            max-width: 650px;
             opacity: 0.6;
             line-height: 1.6;
             letter-spacing: 0.5px;
@@ -198,7 +211,7 @@
 
         .text-side h2 {
             font-family: var(--font-serif);
-            font-size: clamp(2.5rem, 4vw, 4rem);
+            font-size: clamp(2.3rem, 4vw, 3.8rem);
             font-weight: 300;
             line-height: 1.15;
             margin-bottom: 25px;
@@ -211,6 +224,37 @@
             line-height: 1.7;
             opacity: 0.7;
             font-weight: 300;
+            margin-bottom: 35px;
+        }
+
+        /* Bottone info esterno */
+        .info-link {
+            align-self: flex-start;
+            font-family: var(--font-sans);
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 500;
+            padding-bottom: 6px;
+            border-bottom: 1px solid currentColor;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-beige .info-link, .theme-gray .info-link {
+            color: var(--text-dark);
+        }
+
+        .theme-dark .info-link {
+            color: var(--accent-gold);
+        }
+
+        .info-link:hover {
+            opacity: 0.6;
+            transform: translateX(4px);
         }
 
         /* --- FOOTER --- */
@@ -294,10 +338,10 @@
                 direction: ltr;
             }
             .text-side {
-                padding: 80px 6%;
+                padding: 60px 6%;
             }
             .visual-side {
-                min-height: 60vh;
+                min-height: 50vh;
             }
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -310,14 +354,15 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="nav-logo">Diana Iannelli <span>Portfolio</span></div>
+        <div class="nav-logo">Progetto Ombra <span>/ Diana Iannelli</span></div>
         <a href="#contatti" class="contact-btn">Contatti</a>
     </nav>
 
     <!-- HERO -->
     <header class="hero">
+        <span class="brand-top">Progetto Ombra</span>
         <h1>DIANA IANNELLI</h1>
-        <p>Progettazione e visualizzazione tridimensionale d'avanguardia per sistemi architettonici, schermature solari e strutture d'alto profilo.</p>
+        <p>Progettazione sartoriale e visualizzazione tridimensionale d'avanguardia per involucri edilizi, schermature solari avanzate e strutture outdoor d'alto profilo.</p>
     </header>
 
     <main>
@@ -327,6 +372,7 @@
                 <span class="section-num">01 / ARCHITECTURAL SYSTEMS</span>
                 <h2>Vetrate Pieghevoli</h2>
                 <p>Sistemi flessibili che ridefiniscono i confini tra interno ed esterno. Geometrie essenziali, trasparenza assoluta e fluidità di movimento progettate per integrarsi armonicamente con lo spazio circostante.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -341,6 +387,7 @@
                 <span class="section-num">02 / ARCHITECTURAL SYSTEMS</span>
                 <h2>Vetrate Scorrevoli</h2>
                 <p>Grandi specchiature mobili concepite per ottimizzare la luce naturale. Soluzioni strutturali minimali che garantiscono il massimo isolamento termico e acustico senza compromettere la continuità visiva dello skyline.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -355,6 +402,7 @@
                 <span class="section-num">03 / DETAILS & PROTECTION</span>
                 <h2>Ringhiere</h2>
                 <p>Elementi di sicurezza trasformati in dettagli di puro design. Metalli nobili, finiture ricercate e linee pulite delineano percorsi e terrazze con una presenza scenica discreta ma rigorosa.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -369,6 +417,7 @@
                 <span class="section-num">04 / ARCHITECTURAL EXTENSIONS</span>
                 <h2>Pensiline</h2>
                 <p>Sbalzi strutturali leggeri e funzionali che proteggono gli accessi principali. Un connubio perfetto tra ingegneria statica e minimalismo formale, studiato per resistere agli agenti atmosferici più severi.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -383,6 +432,7 @@
                 <span class="section-num">05 / SOLAR PROTECTION</span>
                 <h2>Tenda a Caduta</h2>
                 <p>Schermature verticali minimaliste dedicate alla gestione dell'irraggiamento solare. Tessuti tecnici microforati ad alta resistenza regolano la luminosità interna preservando il benessere termico degli ambienti.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -397,18 +447,11 @@
                 <span class="section-num">06 / SOLAR PROTECTION</span>
                 <h2>Tenda con Cassonetto</h2>
                 <p>Soluzione evoluta di schermatura dove il tessuto e la meccanica di precisione vengono interamente custoditi all'interno di un cassonetto in alluminio estruso, garantendo massima longevità e pulizia visiva quando la tenda è racchiusa.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
-                    <!-- Inserita immagine coordinata e raffinata per il poster della Tenda con Cassonetto -->
-                    <model-viewer 
-                        src="modelli/tenda_cassonetto.gltf" 
-                        poster="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" 
-                        camera-controls 
-                        auto-rotate 
-                        loading="lazy" 
-                        shadow-intensity="1">
-                    </model-viewer>
+                    <model-viewer src="modelli/tenda_cassonetto.gltf" poster="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" camera-controls auto-rotate loading="lazy" shadow-intensity="1"></model-viewer>
                 </div>
             </div>
         </section>
@@ -419,6 +462,7 @@
                 <span class="section-num">07 / OUTDOOR LIFESTYLE</span>
                 <h2>Pergola Bioclimatica</h2>
                 <p>La quintessenza del comfort outdoor. Grazie a lamelle orientabili motorizzate, permette di modulare la ventilazione e la luce solare, creando un microclima ideale e una protezione totale dalla pioggia.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -433,6 +477,7 @@
                 <span class="section-num">08 / OUTDOOR LIFESTYLE</span>
                 <h2>Gazebo</h2>
                 <p>Strutture autoportanti nate per arredare e dare volume a parchi e ampi giardini. Linee geometriche tese e materiali strutturali evoluti per definire oasi d'ombra ed eleganza en plein air.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -447,6 +492,7 @@
                 <span class="section-num">09 / OUTDOOR LIFESTYLE</span>
                 <h2>Ombrelloni</h2>
                 <p>Sistemi di copertura dinamici a braccio laterale o centrale dedicati ai contesti hospitality e residenziali di pregio. Meccanismi di apertura fluidi abbinati a tessuti sartoriali idrorepellenti.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -461,6 +507,7 @@
                 <span class="section-num">10 / ENVELOPE DESIGN</span>
                 <h2>Infissi Alluminio</h2>
                 <p>Serramenti a taglio termico che coniugano profili ultraslim a performance statiche eccezionali. Una scelta d'elezione per l'architettura contemporanea orientata all'efficienza energetica.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -475,6 +522,7 @@
                 <span class="section-num">11 / ENVELOPE DESIGN</span>
                 <h2>Infissi Legno Alluminio</h2>
                 <p>La perfetta sintesi materica: il calore innato e la finitura sartoriale del vero legno all'interno, uniti alla totale indistruttibilità e assenza di manutenzione dell'alluminio sul lato esterno.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -489,6 +537,7 @@
                 <span class="section-num">12 / TRADITION & STRUCTURE</span>
                 <h2>Pergola in Legno</h2>
                 <p>Strutture che celebrano la monumentalità della materia prima. Legni lamellari trattati con impregnanti eco-compatibili per assicurare calore estetico e perfetto inserimento nei contesti paesaggistici protetti.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -503,6 +552,7 @@
                 <span class="section-num">13 / INTERIOR SCENOGRAPHY</span>
                 <h2>Porte per Interni</h2>
                 <p>Sistemi di chiusura raso muro o con cerniere a scomparsa. Soluzioni filomuro studiate per mimetizzarsi con la superficie o per diventare elementi divisori dal forte accento grafico.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -517,6 +567,7 @@
                 <span class="section-num">14 / ACCESS & SECURITY</span>
                 <h2>Porte Blindate</h2>
                 <p>L'eccellenza della protezione domestica declinata in chiave d'alta gamma. Sistemi antieffrazione di classe superiore rivestiti con pannelli complanari in gres, essenze pregiate o vetri laccati.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -531,6 +582,7 @@
                 <span class="section-num">15 / ACCESS & SECURITY</span>
                 <h2>Portoni Sezionali</h2>
                 <p>Chiusure per garage automatizzate ad apertura verticale che ottimizzano lo spazio utile. Pannelli coibentati con finiture customizzate per allinearsi perfettamente alle texture della facciata principale.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -545,6 +597,7 @@
                 <span class="section-num">16 / ACCESS & SECURITY</span>
                 <h2>Grate e Combinati</h2>
                 <p>Sistemi integrati a scomparsa o snodabili che fondono la barriera fisica della grata in acciaio alla funzionalità della persiana, offrendo serenità senza oscurare gli spazi interni.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -559,6 +612,7 @@
                 <span class="section-num">17 / SMART SHADING</span>
                 <h2>Avvolgibili</h2>
                 <p>Sistemi di oscuramento avvolgibili in alluminio estruso ad alta densità o acciaio asolati, concepiti per regolare in modo millimetrico il passaggio di luce e aria, integrandosi nei sistemi domotici.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
@@ -573,10 +627,12 @@
                 <span class="section-num">18 / CLASSIC OVERLAYS</span>
                 <h2>Persiane</h2>
                 <p>L'elemento classico dell'architettura mediterranea riletto attraverso leghe stabili e lavorazioni meccaniche d'avanguardia. Lamelle fisse o orientabili per un controllo totale della privacy.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
-                    <model-viewer src="modelli/persiane.gltf" poster="https://images.unsplash.com/photo-1527030280862-64139fbe04ca?auto=format&fit=crop&w=1200&q=80" camera-controls auto-rotate loading="lazy" shadow-intensity="1"></model-viewer>
+                    <!-- Inserita immagine di copertina lussuosa ed evocativa per le Persiane -->
+                    <model-viewer src="modelli/persiane.gltf" poster="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80" camera-controls auto-rotate loading="lazy" shadow-intensity="1"></model-viewer>
                 </div>
             </div>
         </section>
@@ -589,7 +645,6 @@
                 <p>Una raccolta monografica curata da Diana Iannelli che racchiude la filosofia progettuale, i dettagli costruttivi ed i passaggi materici fondamentali che guidano ogni singola opera e realizzazione.</p>
             </div>
             <div class="visual-side">
-                <!-- Effetto editoriale lussuoso creato direttamente in CSS -->
                 <div class="canvas-3d-wrapper" style="background: linear-gradient(135deg, #111 0%, #222 100%); display:flex; flex-direction: column; align-items:center; justify-content:center; color:#FFF; padding: 20px; text-align: center; border-left: 5px solid rgba(255,255,255,0.1);">
                     <span style="font-family: var(--font-serif); font-size: 14px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.6; margin-bottom: 10px;">Diana Iannelli</span>
                     <h3 style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 300; letter-spacing: 1px; margin-bottom: 15px;">IL LIBRO</h3>
@@ -603,20 +658,20 @@
     <footer id="contatti">
         <div class="footer-grid">
             <div class="footer-brand">
-                <h3>DIANA IANNELLI</h3>
-                <p>Visualizzazioni digitali e concept d'alto profilo dedicati a studi di architettura, interior designer e general contractor d'eccellenza.</p>
+                <h3>PROGETTO OMBRA</h3>
+                <p>Visualizzazioni digitali, schermature solari e concept d'alto profilo in collaborazione con lo studio Diana Iannelli per architettura d'eccellenza.</p>
             </div>
             <div class="footer-contacts">
                 <h4>Inquiries</h4>
                 <ul>
-                    <li><a href="mailto:info@dianaiannelli.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@dianaiannelli.com</a></li>
+                    <li><a href="mailto:info@progettoombra.it"><i class="fa-solid fa-envelope" aria-hidden="true"></i> info@progettoombra.it</a></li>
                     <li><a href="tel:+390258310204"><i class="fa-solid fa-phone" aria-hidden="true"></i> +39 02 58310204</a></li>
-                    <li><a href="#"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Milano, Italia</a></li>
+                    <li><a href="https://www.progettoombra.it" target="_blank"><i class="fa-solid fa-globe" aria-hidden="true"></i> progettoombra.it</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Diana Iannelli. All rights reserved.</p>
+            <p>&copy; 2026 Progetto Ombra / Diana Iannelli. All rights reserved.</p>
             <p>Designed with rigor.</p>
         </div>
     </footer>
