@@ -255,6 +255,47 @@
             transform: translateX(4px);
         }
 
+        /* --- CONTACT SECTION --- */
+        .contact-section {
+            padding: 120px 4%;
+            background-color: var(--bg-dark);
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-container h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .contact-container p {
+            font-size: 16px;
+            opacity: 0.6;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        .big-mail {
+            font-family: var(--font-serif);
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            color: var(--accent-gold);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .big-mail:hover {
+            opacity: 0.8;
+        }
+
         /* --- FOOTER --- */
         footer {
             background-color: #020202;
@@ -376,6 +417,104 @@
             </div>
         </section>
 
+        <section class="split-section theme-gray grid-reverse">
+            <div class="text-side">
+                <span class="section-num">02 / PROTECTION & DESIGN</span>
+                <h2>Pensiline in Policarbonato e Vetro</h2>
+                <p>Strutture leggere e resistenti, concepite per proteggere gli accessi valorizzando l'architettura della facciata. Trasparenze cristalline incontrano la solidità strutturale dell'acciaio e dell'alluminio.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="visual-side">
+                <div class="canvas-3d-wrapper">
+                    <model-viewer src="modelli/pensiline.gltf" poster="Pensiline%20in%20policarbonato%20e%20vetro.jpeg" camera-controls camera-target="0m 2m 0m" camera-orbit="-45deg 75deg 3m" field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section theme-dark">
+            <div class="text-side">
+                <span class="section-num">03 / EXTENDED LIVING</span>
+                <h2>Giardini d'Inverno</h2>
+                <p>Oasi di luce progettate per il benessere termico e visivo in ogni stagione dell'anno. Strutture ad alto isolamento che trasformano lo spazio esterno in una stanza da vivere a pieno comfort.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="visual-side">
+                <div class="canvas-3d-wrapper">
+                    <model-viewer src="modelli/giardini_inverno.gltf" poster="Giardini%20d'inverno%20pergole%20e%20pergolati%20serre%20verande.jpeg" camera-controls camera-target="0m 1.8m 0m" camera-orbit="30deg 70deg 4m" field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section theme-beige grid-reverse">
+            <div class="text-side">
+                <span class="section-num">04 / CARE & SUSTAINABILITY</span>
+                <h2>Outdoor Clean</h2>
+                <p>Servizi specialistici di manutenzione preventiva, lavaggio tecnico e rigenerazione delle superfici tessili e strutturali per preservare inalterata nel tempo l'eleganza dei sistemi outdoor.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="visual-side">
+                <div class="canvas-3d-wrapper">
+                    <model-viewer src="modelli/outdoor_clean.gltf" poster="Lavare%20pergole%20bioclimatiche%20manutenzione%20verande,%20tende%20clean%20outdoor%20.jpeg" camera-controls camera-target="0m 1.2m 0m" field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section theme-gray">
+            <div class="text-side">
+                <span class="section-num">05 / KNOWLEDGE & EDITING</span>
+                <h2>Il Libro delle Bioclimatiche</h2>
+                <p>Una guida monografica d'eccellenza che raccoglie dettagli costruttivi, normative, casi studio e segreti tecnici sulle coperture a lamelle orientabili per progettisti e clienti esigenti.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="visual-side">
+                <div class="canvas-3d-wrapper">
+                    <model-viewer src="modelli/libro_bioclimatiche.gltf" poster="Il%20libro%20scopri%20le%20bioclimatiche.jpeg" camera-controls camera-target="0m 0.5m 0m" camera-orbit="0deg 60deg 1.5m" field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section theme-dark grid-reverse">
+            <div class="text-side">
+                <span class="section-num">06 / INNOVATION & ENERGY</span>
+                <h2>Tessuto Fotovoltaico</h2>
+                <p>La rivoluzione energetica applicata alla schermatura solare. Tessuti tecnici intelligenti capaci di filtrare i raggi solari generando contemporaneamente energia pulita per la casa.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="visual-side">
+                <div class="canvas-3d-wrapper">
+                    <model-viewer src="modelli/tessuto_fotovoltaico.gltf" poster="Rivoluziona%20il%20tuo%20spazio%20esterno%20con%20l'energia%20pulita%20del%20tessuto%20fotovoltaico!.jpeg" camera-controls field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section theme-beige">
+            <div class="text-side">
+                <span class="section-num">07 / OUTDOOR STRUCTURES</span>
+                <h2>Pergole e Pergolati</h2>
+                <p>Architetture intramontabili declinate in materiali d'avanguardia. Linee minimali in alluminio, solidità materica del legno e geometrie rigorose in acciaio per disegnare nuove volumetrie esterne.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="visual-side">
+                <div class="canvas-3d-wrapper">
+                    <model-viewer src="modelli/pergole.gltf" poster="Pegole%20in%20alluminio%20acciaio%20e%20legno,%20pergolati.jpeg" camera-controls camera-target="0m 1.5m 0m" field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section theme-gray grid-reverse">
+            <div class="text-side">
+                <span class="section-num">08 / SURFACES & FOUNDATIONS</span>
+                <h2>Pavimentazioni Galleggianti</h2>
+                <p>Sistemi sopraelevati modulari studiati per garantire planarità perfetta, drenaggio ottimale delle acque piovane e l'alloggiamento a scomparsa di impianti tecnici e cablaggi.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="visual-side">
+                <div class="canvas-3d-wrapper">
+                    <model-viewer src="modelli/pavimentazione.gltf" poster="Pavimentazione%20galleggiante%20per%20esterno.jpeg" camera-controls camera-target="0m 0.2m 0m" field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+        </section>
+
         <section class="split-section theme-dark">
             <div class="text-side">
                 <span class="section-num">09 / OUTDOOR LIFESTYLE</span>
@@ -385,19 +524,27 @@
             </div>
             <div class="visual-side">
                 <div class="canvas-3d-wrapper">
-                    <model-viewer 
-                        src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/BeachUmbrella/glTF-Binary/BeachUmbrella.glb" 
-                        poster="Ombrellon per esterno.jpeg" 
-                        camera-controls 
-                        auto-rotate
-                        camera-target="0m 1m 0m"
-                        camera-orbit="45deg 75deg 3m"
-                        shadow-intensity="1.5">
-                    </model-viewer>
+                    <model-viewer src="modelli/ombrelloni.gltf" poster="Ombrellon%20per%20esterno.jpeg" camera-controls camera-target="0m 1.8m 0m" field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
                 </div>
             </div>
         </section>
 
-        </main>
-</body>
-</html>
+        <section class="split-section theme-beige grid-reverse">
+            <div class="text-side">
+                <span class="section-num">10 / CLIMATIC COMFORT</span>
+                <h2>Bioclimatiche a Lamelle</h2>
+                <p>Coperture intelligenti che regolano autonomamente il microclima sottostante grazie all'orientamento motorizzato dei profili in alluminio, controllando luce, ventilazione e protezione.</p>
+                <a href="https://www.progettoombra.it" target="_blank" class="info-link">Info & Immagini <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <div class="visual-side">
+                <div class="canvas-3d-wrapper">
+                    <model-viewer src="modelli/bioclimatiche_lamelle.gltf" poster="Bioclimatiche%20pergole%20con%20lamelle%20orientabili%20bris.jpeg" camera-controls camera-target="0m 1.6m 0m" field-of-view="45deg" interpolation-decay="200" loading="lazy" shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+        </section>
+
+        <section class="split-section theme-gray">
+            <div class="text-side">
+                <span class="section-num">11 / NAUTICAL INSPIRATION</span>
+                <h2>Vele da Sole</h2>
+                <p>Strutture tese di ispirazione nautica, caratterizzate da profili leggeri e sistemi di avvolgimento automatici
